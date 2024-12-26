@@ -1,0 +1,149 @@
+{
+	"layer": "top",
+	"position": "top",
+	"height": 26,
+	"width": 1800,
+	"margin-top": 10,
+
+	
+    "modules-left": ["cpu", "memory", "custom/weather", "custom/cmus"],
+    "modules-center": ["custom/menu", "custom/sep", "hyprland/workspaces", "custom/sep", "hyprland/window"],
+    "modules-right": ["tray", "network", "pulseaudio", "hyprland/language",  "clock", "custom/power"],
+
+
+    "cpu": {
+		"format": "  {usage}%",
+		"tooltip": false,
+		"on-click" : "kitty --class nmwui htop"
+    },
+
+
+	"memory": {
+		"format": "  {}%",
+		"tooltip": false,
+		"on-click" : "kitty --class nmwui htop"
+},
+
+
+	"hyprland/window": {
+		"format": "{class}",
+		"separate-outputs": false,
+},
+
+
+	"custom/menu": {
+		"format": "{icon}",
+		"format-icons": "󰣇",
+		"on-click": "~/.config/hypr/themes/hypr_arch/rofi/deathemonic/bin/launcher",
+		"escape": true,
+		"tooltip": false
+	},
+
+
+	"hyprland/workspaces": {
+		"format": "{icon}", "on-click": "activate", "format-icons": {
+			"1": "󰖟",
+			"2": "󰳫",
+			"3": "",
+			"4": "",
+			"5": "",
+			"6": "󰊗",
+			"7": "",
+			},
+		"tooltip": false
+	},
+
+
+	"hyprland/language": {
+	    "format": "{}",
+	    "format-en": "EN",
+	    "format-ru": "RU",
+	},
+
+
+	"tray": {
+		"icon-size": 24,
+		"spacing": 16
+	},
+
+	
+"network":{
+	"format-wifi": " ",
+	"format-ethernet": "󰈀",
+    "format-disconnected": "󰖪 ",
+	"tooltip-format" : "{essid}",
+	"on-click" : "kitty --class nmwui nmtui"
+},
+
+
+
+"battery":{
+	"format": "<span  color=\"#FFFFFF\" font='Font Awesome 5 Free 11'>{icon}</span>    {capacity}%",
+	"format-icons": ["", "", "", "", ""],
+	"format-time": "{H}h{M}m",
+	"format-full": "<span font=`'Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  Charged",
+	"interval": 30,
+	"states": {
+		"warning": 25,
+		"critical": 10
+	},
+	"tooltip": false,
+},
+
+
+
+	"clock": {
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+		"format-alt": "{:%Y-%m-%d}"
+	},
+
+
+    "pulseaudio": {
+		"scroll-step": 5,
+		"format": "{icon}  {volume}%",
+		"format-icons": {
+			"default": ["", "", ""]
+		},
+		"on-click": "kitty --class pulsemixer pulsemixer"
+	},
+
+
+	"custom/weather": {
+	"format": "{}",
+	"interval": 1800,
+	"exec": "~/.config/hypr/themes/hypr_arch/waybar/weather.sh",
+	"tooltip": true
+	},
+
+
+	"custom/cmus": {
+	"format": "{icon} {0}",
+	"format-icons": {
+		"default": [""]
+		},
+	"max-length": 45,
+	"interval": 1,
+	"exec": "cmus-remote -C \"format_print '%t'\"",
+	"exec-if": "pgrep cmus",
+	"on-click": "cmus-remote -u",
+	"on-scroll-up": "cmus-remote --next",
+	"on-scroll-down": "cmus-remote --prev",
+	"escape": true,
+	"tooltip": false
+	},
+
+	"custom/sep": {
+	"format": "_",
+	},
+
+  
+"custom/power": {
+    "format": "{icon}",
+    "format-icons": "",
+    "on-click": "~/.config/hypr/themes/hypr_arch/rofi/deathemonic/bin/powermenu",
+    "escape": true,
+    "tooltip": false
+  },
+
+
+}
