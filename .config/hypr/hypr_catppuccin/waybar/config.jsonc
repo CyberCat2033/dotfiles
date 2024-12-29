@@ -46,7 +46,6 @@
   //   "max-length": 40,
   //   "on-click": "playerctl play-pause",
   //   "on-click-right": "playerctl stop",
-  //   "smooth-scrolling-threshold": 10, // This value was tested using a trackpad, it should be lowered if using a mouse.
   //   "on-scroll-up": "playerctl next",
   //   "on-scroll-down": "playerctl previous",
   //   "exec": "$HOME/.config/scripts/mediaplayer.py 2> /dev/null", // Script in resources/custom_modules folder
@@ -55,44 +54,25 @@
   "custom/playerctl": {
     "format": "<span color='#89b4fa'>{icon}</span>  {0}",
     "format-icons": {
-      "": [""],
-      "": [""],
-      "": [""],
+      "Playing": [""],
+      "Paused": [""],
+      "Stopped": [""],
     },
-    "max-length": 25,
+    "max-length": 33,
     "interval": 1,
     "return-type": "json",
-    "exec": "~/.config/hypr/hypr_catppuccin/waybar/scripts/playerctl.sh",
-    "on-click": "playerctl play-pause",
-    "on-scroll-up": "playerctl next",
-    "on-scroll-down": "playerctl previous",
+    "exec": "~/.config/scripts/playerctl.sh",
+    "on-click": "playerctl play-pause | ~/.config/scripts/playerctl_album.sh",
+    "on-scroll-up": "playerctl next | ~/.config/scripts/playerctl_album.sh",
+    "on-scroll-down": "playerctl previous | ~/.config/scripts/playerctl_album.sh",
     "escape": true,
     "tooltip": true,
   },
 
-  // "custom/cmus": {
-  //   "format": "<span color='#89b4fa'>{icon}</span> {0}",
-  //   "format-icons": {
-  //     "default": [""],
-  //     "pause": [""],
-  //     "stop": [""],
-  //   },
-  //   "max-length": 25,
-  //   "interval": 1,
-  //   // "exec": "~/.config/hypr/hypr_catppuccin/waybar/cmus.sh",
-  //   "exec": "cmus-remote -C \"format_print %t\"",
-  //   "exec-if": "pgrep cmus",
-  //   "on-click": "cmus-remote -u",
-  //   "on-scroll-up": "cmus-remote --next",
-  //   "on-scroll-down": "cmus-remote --prev",
-  //   "escape": true,
-  //   "tooltip": false,
-  // },
-  //
   "custom/weather": {
     "format": "<span color='#fab387'></span>{0}",
     "interval": 1800,
-    "exec": "~/.config/hypr/hypr_catppuccin/waybar/weather.sh",
+    "exec": "~/.config/scripts/weather.sh",
     "tooltip": true,
   },
 
@@ -100,14 +80,14 @@
     "format": "<span color='#a6e3a1'> </span> {usage}%",
     "tooltip": false,
     "escape": true,
-    "on-click": "kitty --class nmwui htop",
+    "on-click": "kitty --class nmwui btop",
   },
 
   "memory": {
     "format": "<span color='#89b4fa'></span>  {}%",
     "tooltip": false,
     "escape": true,
-    "on-click": "kitty --class nmwui htop",
+    "on-click": "kitty --class nmwui btop",
   },
 
   "tray": {
@@ -188,6 +168,6 @@
     "tooltip": false,
   },
 
-  "escape": true,
-  "exec": "~/.config/hypr/hypr_catppuccin/waybar/mediaplayer.py 2> /dev/null",
+  // "escape": true,
+  // "exec": "~/.config/hypr/hypr_catppuccin/waybar/mediaplayer.py 2> /dev/null",
 }

@@ -188,6 +188,7 @@ button:hover {
   border: none;
   border-radius: 20;
 }
+
 #clock:hover {
   color: @yellow;
 }

@@ -41,7 +41,7 @@ confirm_exit() {
 }
 
 run_rofi() {
-  echo -e "$lock\n$logout\n$suspend\n$reboot\n$shutdown" | rofi_cmd
+  echo -e "$shutdown\n$lock\n$suspend\n$logout\n$reboot" | rofi_cmd
 }
 
 run_cmd() {
@@ -116,7 +116,7 @@ case ${chosen} in
   ;;
 "$suspend")
   echo "Suspend selected"
-  run_cmd --sus
+  (systemctl suspend | sleep 0.5 && hyprlock -c ~/.config/hypr/hypr_catppuccin/hyprlock.conf) || loginctl suspend
   ;;
 "$logout")
   echo "Logout selected"
