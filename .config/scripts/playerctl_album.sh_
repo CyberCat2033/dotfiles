@@ -1,0 +1,36 @@
+#!/bin/bash
+
+cover_path="/tmp/playerctl_cover.jpg"
+rounded_cover="/tmp/playerctl_cover_rounded.png"
+activeplayer=$(playerctl -l 2>/dev/null)
+
+if [ "$activeplayer" == "cmus" ]; then
+  file=$(cmus-remote -Q | awk '/^file/ {print substr($0, 6)}')
+  ffmpeg -y -i "$file" -an -vcodec copy "$cover_path" &>/dev/null || rm -f "$cover_path"
+else
+  sleep 0.78
+  cover_url=$(playerctl metadata mpris:artUrl 2>/dev/null)
+fi
+
+if [ -n "$cover_url" ]; then
+  curl -sL "$cover_url" -o "$cover_path"
+fi
+
+if [[ -n "$cover_url" || "$activeplayer" == "cmus" ]]; then
+  magick "$cover_path" \
+    -resize 128x128^ \
+    -gravity center \
+    -extent 128x128 \
+    \( +clone -alpha extract \
+    -draw "fill black rectangle 0,0 128,128 \
+                  fill white circle 64,64 64,0" \
+    -alpha off \) \
+    -compose CopyOpacity -composite \
+    "$rounded_cover"
+else
+  rounded_cover="/usr/share/icons/Tela-circle-black/scalable/apps/com.github.neithern.g4music.svg"
+fi
+
+read -r status metadata <<<"$(playerctl status 2>/dev/null) $(playerctl metadata --format '{{title}}|{{artist}}' 2>/dev/null)"
+IFS="|" read -r title artist <<<"$metadata"
+notify-send -r 8888 -i "$rounded_cover" -u critical -t 1488 "$status" "$artist\n$title"
