@@ -1,47 +1,46 @@
 # GLOBAL
 #sort=+time
-layer=overlay
+# layer=overlay
 
 # STYLE
-font=Bebas Neue 11.2
-width=190
-margin=20
-default-timeout=2000
-padding=0, 0, 20, 20
+font=JetBrains Mono 12
+width=280
+margin=10
+border-size=2
+padding=8, 8,  0,  0
 border-size=1
+icons=1
+markup=1
 border-radius=10
+default-timeout=1488
 progress-color=#1e1e2e
-max-icon-size=36
-icon-path=/home/cybercat/.icons/Catppuccin-Mocha-Alt2
+max-icon-size=64
+icon-path= /usr/share/icons/Tela-circle-black/scalable/apps/:/usr/share/icons/Tela-circle-black/scalable/devices/:/usr/share/icons/Tela-circle-black/scalable/mimetypes/:/usr/share/icons/Tela-circle-black/scalable/places/
 icon-location=left
 format=<b>%s</b>\n%b
-text-alignment=left
-anchor=top-right
-
+text-alignment=center
+#anchor=top-center
 # CRITERA
 ## urgency
 [urgency=low]
-font=Bebas Neue Bold 12.2
 default-timeout=2000
 background-color=#1e1e2e
 border-color=#cdd6f4
+background-color=#1e1e2e
 text-color=#cdd6f4
 
 [urgency=normal]
 icons=1
-font=Bebas Neue Bold 16.3
 default-timeout=3000
 background-color=#1e1e2e
-border-color=#cdd6f4
-text-color=#fab387
+border-color=#1E1E2E
+text-color=#CDD6F4
 
 [urgency=critical]
-font=Bebas Neue Bold 21.2
 default-timeout=2000
-background-color=#f5c2e7
-border-color=#cdd6f4
-text-color=#1e1e2e
-on-notify=exec mpv /usr/share/sounds/freedesktop/stereo/dialog-warning.oga
+background-color=#1E1E2E
+border-color=#FAB387
+text-color=#CDD6F4
 
 ## app-name
 [app-name=grim]
@@ -52,5 +51,5 @@ default-timeout=3000
 on-notify=exec "Cкриншот сохранен:"
 
 ## body
-[body=""]
-format=%s\n%b
+# [body=""]
+# format=%s\n%b

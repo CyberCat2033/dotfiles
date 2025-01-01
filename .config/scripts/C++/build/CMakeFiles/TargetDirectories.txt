@@ -1,0 +1,3 @@
+/home/cybercat/.config/scripts/build/CMakeFiles/image_processor.dir
+/home/cybercat/.config/scripts/build/CMakeFiles/edit_cache.dir
+/home/cybercat/.config/scripts/build/CMakeFiles/rebuild_cache.dir

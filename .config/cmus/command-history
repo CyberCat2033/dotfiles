@@ -1,0 +1,77 @@
+q
+set dsp.jack.resampling_quality=2
+set buffer_size 512
+set buffer_sizw 512
+:set buffer_size 512
+set output_plugin=pulse
+set output_plugin=jack
+set output_plugin=alsa
+set output_plugin=pipewire
+set output_plugin=
+update
+filter electro
+fset electro=genre="Electro"
+filter 
+filter electronic
+fset electronic=genre="Electronic"
+filter lofi
+fset lofi=genre="Lo-Fi"
+filter rock
+fset rock=genre="Rock"
+fset ogg-or-mp3=ogg|mp3
+filter metal
+fset metal=genre="Metal"
+add 
+add
+bind common A add
+filter classical
+filter Classical
+F Classical
+fset classical=genre="Classical"
+set progress_bar=line
+set progress_bar=color
+set progress_bar=color_shuttle
+set progress_bar=color_shutle
+set progress_bar=
+w
+set replaygain_preamp=0.100000
+set replaygain_preamp=1.100000
+set replaygain=album
+set replaygain=enabled
+set color_cmdline_fg=254
+bind common <key> player-pause-playback
+bind common alt space player-pause-playback
+bind common ^space player-pause-playback
+bind common space player-pause-playback
+bind -f browser space win-activate
+bind -f common i win-sel-cur
+bind common <space> player-pause-playback
+bind common <^space> player-pause-playback
+wq
+set color_trackwin_album_fg=default
+set color_trackwin_album_fg=red
+set color_trackwin_album_bg=default
+set color_trackwin_album_bg=red
+set color_trackwin_album_bg=pink
+set color_trackwin_album_bglightred
+set color_trackwin_album_bg=rose
+set color_trackwin_album_bg=true
+set color_trackwin_album_attr=bold
+live-filter 
+set dsp.coreaudio.enable_hog_mode true
+dsp.coreaudio.enable_hog_mode true
+help
+vol=20
+vol20
+vol 12
+vol 100
+live-filter L
+fset 90s=date>=1990&date<2000
+save -l
+live-filter
+live-filter Metallica
+b
+M
+a ~/Music
+colorscheme night
+colorscheme dracula

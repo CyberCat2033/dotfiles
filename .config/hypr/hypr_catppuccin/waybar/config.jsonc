@@ -58,7 +58,7 @@
       "Paused": [""],
       "Stopped": [""],
     },
-    "max-length": 33,
+    "max-length": 30,
     "interval": 1,
     "return-type": "json",
     "exec": "~/.config/scripts/playerctl.sh",

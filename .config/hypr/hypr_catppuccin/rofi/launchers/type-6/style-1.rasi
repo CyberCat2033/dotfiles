@@ -61,7 +61,7 @@ mainbox {
 imagebox {
     padding:                     20px;
     background-color:            transparent;
-    background-image:            url("~/.config/hypr/hypr_catppuccin/rofi/images/cosmo.jpg", height);
+    background-image:            url("~/.config/hypr/hypr_catppuccin/rofi/images/cosmo1.jpg", height);
     orientation:                 vertical;
     children:                    [ "inputbar", "dummy", "mode-switcher" ];
 }

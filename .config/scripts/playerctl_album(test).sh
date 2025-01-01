@@ -49,4 +49,4 @@ fi
 # echo $status
 # echo "Artist: $artist, Title: $title, File: $file"
 # echo $rounded_cover
-notify-send -r 8888 -i "$rounded_cover" -u critical -t 1488 "$status" "$artist\n$title"
+notify-send --hint=string:x-canonical-private-synchronous:8888 -i "$rounded_cover" -u critical -t 1488 "$status" "$artist\n$title"
