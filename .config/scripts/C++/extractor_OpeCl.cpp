@@ -1,6 +1,5 @@
 #include <iostream>
 #include <opencv4/opencv2/core/mat.hpp>
-#include <opencv4/opencv2/core/ocl.hpp>
 #include <opencv4/opencv2/imgproc.hpp>
 #include <opencv4/opencv2/opencv.hpp>
 #include <signal.h>
@@ -86,24 +85,15 @@ void run_daemon() {
 }
 
 int main() {
+  unlink("/tmp/command_socket");
   const char *input_path = "/tmp/playerctl_cover.jpg";
   const char *output_path = "/tmp/playerctl_cover_rounded.png";
-  const int mask_size = 128;
+  const int mask_size = 160;
 
-  // Проверяем доступность OpenCL
-  if (!cv::ocl::haveOpenCL()) {
-    std::cerr << "OpenCL is not available!" << std::endl;
-    return -1;
-  }
-
-  cv::ocl::setUseOpenCL(true);
-
-  // Создаем маску с использованием OpenCV
-  cv::UMat mask;
-  cv::UMat tmp_mask = cv::UMat::zeros(mask_size, mask_size, CV_8UC1);
-  cv::circle(tmp_mask, cv::Point(mask_size / 2, mask_size / 2), mask_size / 2,
+  // Создаем маску
+  cv::Mat mask = cv::Mat::zeros(mask_size, mask_size, CV_8UC1);
+  cv::circle(mask, cv::Point(mask_size / 2, mask_size / 2), mask_size / 2,
              cv::Scalar(255), -1);
-  tmp_mask.copyTo(mask);
 
   // Запускаем демон
   run_daemon();
@@ -128,27 +118,56 @@ int main() {
     }
 
     if (command == "process") {
-      cv::UMat image;
-      cv::imread(input_path).copyTo(image);
+      cv::Mat image = cv::imread(input_path);
 
       if (image.empty()) {
         std::cerr << "Error reading image: " << input_path << std::endl;
         continue;
       }
 
-      cv::UMat resized_image;
-      cv::resize(image, resized_image, cv::Size(mask_size, mask_size), 0, 0,
-                 cv::INTER_AREA);
+      // Изменение размера изображения с сохранением пропорций
 
-      cv::UMat circular_image;
-      resized_image.copyTo(circular_image, mask);
+      Mat circular_image;
+      if (image.cols != image.rows) {
+        int new_width, new_height;
+        if (image.cols < image.rows) {
+          new_width = mask_size;
+          new_height = static_cast<int>(
+              image.rows * (static_cast<float>(mask_size) / image.cols));
+        } else {
+          new_height = mask_size;
+          new_width = static_cast<int>(
+              image.cols * (static_cast<float>(mask_size) / image.rows));
+        }
 
-      std::vector<cv::UMat> channels;
+        cv::Mat resized_image;
+        cv::resize(image, resized_image, cv::Size(new_width, new_height), 0, 0,
+                   cv::INTER_NEAREST);
+
+        // Центрирование и обрезка до квадрата
+        cv::Mat square_image =
+            cv::Mat::zeros(mask_size, mask_size, image.type());
+        int x_offset = (new_width - mask_size) / 2;
+        int y_offset = (new_height - mask_size) / 2;
+        resized_image(cv::Rect(x_offset, y_offset, mask_size, mask_size))
+            .copyTo(square_image);
+
+        // Применение маски
+        square_image.copyTo(circular_image, mask);
+      } else {
+        cv::Mat resized_image;
+        cv::resize(image, resized_image, cv::Size(mask_size, mask_size), 0, 0,
+                   cv::INTER_NEAREST);
+
+        resized_image.copyTo(circular_image, mask);
+      }
+      // Добавление альфа-канала
+      std::vector<cv::Mat> channels;
       cv::split(circular_image, channels);
       channels.push_back(mask);
-
       cv::merge(channels, circular_image);
 
+      // Сохранение результата
       if (!cv::imwrite(output_path, circular_image)) {
         std::cerr << "Error writing image: " << output_path << std::endl;
       }

@@ -1,0 +1,173 @@
+{
+  "height": 40,
+  // "width": 1300,
+  "margin-top": 10,
+
+  "modules-left": ["custom/menu", "hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["custom/playerctl", "cpu", "memory", "custom/weather"], //"custom/weather"
+  "modules-right": [
+    "tray",
+    "network",
+    "hyprland/language",
+    "pulseaudio",
+    "clock",
+    "battery",
+    "custom/power",
+  ],
+
+  "custom/menu": {
+    "format": "{icon}",
+    "format-icons": "",
+    "on-click": "~/.config/hypr/Ayanami_Ray/rofi/launchers/type-6/launcher_2.sh",
+    "escape": true,
+    "tooltip": false,
+  },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "urgent": "",
+      "active": "",
+      "default": "",
+    },
+    "tooltip": false,
+  },
+
+  "hyprland/window": {
+    "format": "{class}",
+    "separate-outputs": false,
+  },
+
+  // "custom/media": {
+  //   "format": "{icon} {0}",
+  //   "escape": true,
+  //   "return-type": "json",
+  //   "max-length": 40,
+  //   "on-click": "playerctl play-pause",
+  //   "on-click-right": "playerctl stop",
+  //   "on-scroll-up": "playerctl next",
+  //   "on-scroll-down": "playerctl previous",
+  //   "exec": "$HOME/.config/scripts/mediaplayer.py 2> /dev/null", // Script in resources/custom_modules folder
+  // },
+
+  "custom/playerctl": {
+    "format": "<span color='#89b4fa'>{icon}</span>  {0}",
+    "format-icons": {
+      "Playing": [""],
+      "Paused": [""],
+      "Stopped": [""],
+    },
+    "max-length": 30,
+    "interval": 1,
+    "return-type": "json",
+    "exec": "~/.config/scripts/playerctl.sh",
+    "on-click": "playerctl play-pause | ~/.config/scripts/playerctl_album.sh_",
+    "on-scroll-up": "playerctl next | ~/.config/scripts/playerctl_album.sh_",
+    "on-scroll-down": "playerctl previous | ~/.config/scripts/playerctl_album.sh_",
+    "escape": true,
+    "tooltip": true,
+  },
+
+  "custom/weather": {
+    "format": "<span color='#94e2d5'></span>{0}",
+    "interval": 1800,
+    "exec": "~/.config/scripts/weather.sh",
+    "tooltip": true,
+  },
+
+  "cpu": {
+    "format": "<span color='#a6e3a1'> </span> {usage}%",
+    "tooltip": false,
+    "escape": true,
+    "on-click": "kitty --class nmwui btop",
+  },
+
+  "memory": {
+    "format": "<span color='#89b4fa'></span>  {}%",
+    "tooltip": false,
+    "escape": true,
+    "on-click": "kitty --class nmwui btop",
+  },
+
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10,
+  },
+
+  "network": {
+    "format-wifi": "",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "󰖪",
+    "tooltip-format": "{essid}",
+    "on-click": "kitty --class nmwui nmtui",
+  },
+
+  "battery": {
+    "interval": 2,
+    "states": {
+      "warning": 25,
+      "critical": 15,
+    },
+    "format": "<span color='#94e2d5'>{icon}</span>{capacity: >3}%",
+    "format-charging": "<span color='#94e2d5'></span> {capacity}%",
+    "format-plugged": "<span color='#94e2d5'></span> {capacity}%",
+    "format-full": "<span color='#94e2d5'> {icon}</span> {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+  },
+
+  "hyprland/language": {
+    "format": "<span color='#94e2d5'>󰌏</span> {}",
+    "format-en": "EN",
+    "format-ru": "RU",
+  },
+
+  "pulseaudio": {
+    "scroll-step": 5,
+    "format": "<span color='#94e2d5'>{icon}</span> {volume}%",
+    "format-icons": {
+      "default": ["", "", ""],
+    },
+    "on-click": "kitty --class pulsemixer pulsemixer",
+    "tooltip": false,
+  },
+
+  "clock": {
+    "format": "<span color='#94e2d5'></span> {:L%H:%M}",
+    "tooltip-format": "<big><span color='#cdd6f4'>{:%Y %B}</span></big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "<span color='#eba0ac'></span> <span color='#cdd6f4'>{:%Y-%m-%d}</span>",
+    // "timezone": "America/New_York",
+    // "timezones": ["Europe/Moscow"],
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#cdd6f4'><b>{}</b></span>",
+        "days": "<span color='#cdd6f4'><b>{}</b></span>",
+        "weeks": "<span color='#f5c2e7'><b>W{}</b></span>",
+        "weekdays": "<span color='#f5c2e7'><b>{}</b></span>",
+        "today": "<span color='#eba0ac'><b><u>{}</u></b></span>",
+      },
+    },
+    "actions": {
+      // "on-click-right": "mode",
+      "on-click-right": "tz_up",
+      "on-click-backward": "tz_down",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down",
+    },
+  },
+
+  "custom/power": {
+    "format": "{icon}",
+    "format-icons": "",
+    "on-click": "~/.config/hypr/Ayanami_Ray/rofi/powermenu/type-4/powermenu.sh",
+    "escape": true,
+    "tooltip": false,
+  },
+
+  // "escape": true,
+  // "exec": "~/.config/hypr/hypr_catppuccin/waybar/mediaplayer.py 2> /dev/null",
+}

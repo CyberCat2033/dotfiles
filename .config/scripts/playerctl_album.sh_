@@ -61,7 +61,7 @@ if [ -f "$cover_path" ]; then
   # Обновляем только если исходная обложка изменилась
   # Используем ffmpeg для обработки изображения (создание круглой обложки)
 
-  [ -e "/tmp/commad_socket" ] || ~/.config/hypr/image_processorTest
+  [ -e "/tmp/command_socket" ] || ~/.config/hypr/image_processorNearest1_
   echo -n "process" | socat - UNIX-CONNECT:/tmp/command_socket
   # magick "$cover_path" \
   #   -resize 128x128^ \
