@@ -38,19 +38,6 @@
     "format": "{class}",
     "separate-outputs": false,
   },
-
-  // "custom/media": {
-  //   "format": "{icon} {0}",
-  //   "escape": true,
-  //   "return-type": "json",
-  //   "max-length": 40,
-  //   "on-click": "playerctl play-pause",
-  //   "on-click-right": "playerctl stop",
-  //   "on-scroll-up": "playerctl next",
-  //   "on-scroll-down": "playerctl previous",
-  //   "exec": "$HOME/.config/scripts/mediaplayer.py 2> /dev/null", // Script in resources/custom_modules folder
-  // },
-
   "custom/playerctl": {
     "format": "<span color='#89b4fa'>{icon}</span>  {0}",
     "format-icons": {
@@ -62,9 +49,9 @@
     "interval": 1,
     "return-type": "json",
     "exec": "~/.config/scripts/playerctl.sh",
-    "on-click": "playerctl play-pause | ~/.config/scripts/playerctl_album.sh_",
-    "on-scroll-up": "playerctl next | ~/.config/scripts/playerctl_album.sh_",
-    "on-scroll-down": "playerctl previous | ~/.config/scripts/playerctl_album.sh_",
+    "on-click": "playerctl play-pause | ~/.config/scripts/playerctl_album.sh",
+    "on-scroll-up": "playerctl next | ~/.config/scripts/playerctl_album.sh",
+    "on-scroll-down": "playerctl previous | ~/.config/scripts/playerctl_album.sh",
     "escape": true,
     "tooltip": true,
   },

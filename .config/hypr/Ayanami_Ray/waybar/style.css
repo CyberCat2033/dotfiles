@@ -8,7 +8,9 @@
 }
 
 @define-color bg transparent;
-@define-color bg2 #21283e;
+/*@define-color bg2 #21283e;*/
+@define-color bg2   rgba(24, 42, 79, 0.8);
+/*@define-color bg2 #3A3D54;*/
 @define-color fg #cdd6f4;
 @define-color pink #f5c2e7;
 @define-color green #a6e3a1;
@@ -32,7 +34,7 @@ window#waybar {
   border-radius: 20;
 }
 #custom-menu:hover {
-  color: #94e2d5;
+  color: @yellow;
 }
 
 #workspaces {

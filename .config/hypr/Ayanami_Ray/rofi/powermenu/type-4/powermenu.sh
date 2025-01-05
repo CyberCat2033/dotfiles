@@ -59,7 +59,7 @@ run_cmd() {
       amixer set Master mute
       systemctl suspend
       sleep 3
-      hyprlock -c ~/.config/hypr/Ayanami_Ray/hyprlock.conf
+      hyprlock -c ~/.config/hypr/Ayanami_Ray/hyprlock/hyprlock.conf
       ;;
     '--reboot')
       echo "Rebooting..."
@@ -68,18 +68,12 @@ run_cmd() {
       ;;
     '--logout')
       echo "Logging out..."
-      if [[ "$DESKTOP_SESSION" == 'openbox' ]]; then
-        openbox --exit
-      elif [[ "$DESKTOP_SESSION" == 'bspwm' ]]; then
-        bspc quit
-      elif [[ "$DESKTOP_SESSION" == 'i3' ]]; then
-        i3-msg exit
-      elif [[ "$DESKTOP_SESSION" == 'plasma' ]]; then
-        qdbus org.kde.ksmserver /KSMServer logout 0 0 0
-      else
-        sleep 0.2
-        hyprctl dispatch exit
-      fi
+      sleep 0.2
+      hyprctl dispatch exit
+      # loginctl terminate-user ""
+      # loginctl terminate-session "$XDG_SESSION_ID"
+      # systemctl --user stop wayland-wm@*.service
+      # uwsm stop
       ;;
     *)
       echo "Unknown command!"
@@ -105,18 +99,12 @@ case ${chosen} in
   ;;
 "$lock")
   echo "Lock selected"
-  if [[ -x '/usr/bin/betterlockscreen' ]]; then
-    betterlockscreen -l
-  elif [[ -x '/usr/bin/i3lock' ]]; then
-    i3lock
-  else
-    sleep 0.1
-    hyprlock -c ~/.config/hypr/Ayanami_Ray/hyprlock.conf
-  fi
+  sleep 0.1
+  hyprlock -c ~/.config/hypr/Ayanami_Ray/hyprlock/hyprlock.conf
   ;;
 "$suspend")
   echo "Suspend selected"
-  (systemctl suspend | sleep 0.5 && hyprlock -c ~/.config/hypr/Ayanami_Ray/hyprlock.conf) || loginctl suspend
+  (systemctl suspend | sleep 0.5 && hyprlock -c ~/.config/hypr/Ayanami_Ray/hyprlock/hyprlock.conf) || loginctl suspend
   ;;
 "$logout")
   echo "Logout selected"

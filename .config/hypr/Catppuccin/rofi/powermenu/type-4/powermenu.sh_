@@ -1,0 +1,94 @@
+#!/usr/bin/env bash
+
+## Author : Aditya Shakya (adi1090x)
+## Github : @adi1090x
+#
+## Rofi   : Power Menu
+#
+## Available Styles
+#
+## style-1   style-2   style-3   style-4   style-5
+
+dir="~/.config/hypr/hypr_catppuccin/rofi/powermenu/type-4"
+theme='style-3'
+
+uptime="$(uptime -p | sed -e 's/up //g')"
+host=$(hostname)
+
+shutdown='⏻'
+reboot=''
+lock='󰍁'
+suspend=''
+logout='󰍃'
+yes=''
+no=''
+
+confirm_cmd() {
+  rofi -dmenu \
+    -p 'Confirmation' \
+    -mesg 'Are you Sure?' \
+    -theme ${dir}/shared/confirm.rasi
+}
+
+confirm_exit() {
+  echo -e "$yes\n$no" | confirm_cmd
+}
+
+run_rofi() {
+  echo -e "$lock\n$logout\n$suspend\n$reboot\n$shutdown" | rofi_cmd
+}
+
+run_cmd() {
+  selected="$(confirm_exit)"
+  if [[ "$selected" == "$yes" ]]; then
+    if [[ $1 == '--shut' ]]; then
+      systemctl poweroff
+    elif [[ $1 == '--sus' ]]; then
+      mpc -q pause
+      amixer set Master mute
+      systemctl suspend
+    elif [[ $1 == '--reboot' ]]; then
+      hyprctl dispatch exit
+    elif [[ $1 == '--logout' ]]; then
+      if [[ "$DESKTOP_SESSION" == 'openbox' ]]; then
+        openbox --exit
+      elif [[ "$DESKTOP_SESSION" == 'bspwm' ]]; then
+        bspc quit
+      elif [[ "$DESKTOP_SESSION" == 'i3' ]]; then
+        i3-msg exit
+      elif [[ "$DESKTOP_SESSION" == 'plasma' ]]; then
+        qdbus org.kde.ksmserver /KSMServer logout 0 0 0
+      else
+        hyprctl dispatch exit
+      fi
+    fi
+  else
+    exit 0
+  fi
+}
+
+# Actions
+chosen=$(run_rofi)
+case ${chosen} in
+$shutdown)
+  run_cmd --shut
+  ;;
+$reboot)
+  run_cmd --reboot
+  ;;
+$lock)
+  if [[ -x '/usr/bin/betterlockscreen' ]]; then
+    betterlockscreen -l
+  elif [[ -x '/usr/bin/i3lock' ]]; then
+    i3lock
+  else
+    hyprlock -c ~/.config/hypr/hypr_catppuccin/hyprlock.conf
+  fi
+  ;;
+$suspend)
+  run_cmd --sus
+  ;;
+$logout)
+  run_cmd --logout
+  ;;
+esac

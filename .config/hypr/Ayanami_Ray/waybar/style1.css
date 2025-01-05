@@ -1,0 +1,82 @@
+* {
+  font-family:
+    JetBrainsMono,
+    Symbols Nerd Font;
+  font-weight: bold;
+  font-size: 13px;
+  min-height: 0;
+}
+
+@define-color bg rgba(30, 30, 46, 0.8);
+@define-color bg2 #162a4f;
+@define-color fg #cdd6f4;
+@define-color pink #f5c2e7;
+@define-color green #a6e3a1;
+@define-color fl #f2cdcd;
+@define-color blue #8aa7fa;
+@define-color red #ff3a3f;
+@define-color vl #cba6f7;
+@define-color yellow #94e2d5;
+
+window#waybar {
+  border-radius: 20px;
+  background-color: @bg;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#custom-menu,
+#workspaces,
+#window,
+#custom-weather,
+#custom-playerctl,
+#custom-cmus,
+#cpu,
+#memory,
+#tray,
+#language,
+#pulseaudio,
+#battery,
+#clock,
+#custom-power,
+#network {
+  padding: 5px 20px;
+  margin: 5px;
+  color: @fg;
+  background-color: @bg2;
+  border: none;
+  border-radius: 15px;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+#custom-menu:hover,
+#workspaces:hover,
+#window:hover,
+#custom-weather:hover,
+#custom-playerctl:hover,
+#custom-cmus:hover,
+#cpu:hover,
+#memory:hover,
+#tray:hover,
+#language:hover,
+#pulseaudio:hover,
+#battery:hover,
+#clock:hover,
+#custom-power:hover,
+#network:hover {
+  color: @yellow;
+  background-color: rgba(22, 42, 79, 0.8);
+}
+
+#pulseaudio.muted {
+  color: @red;
+}
+
+tooltip {
+  background: @bg2;
+  margin: 20px;
+  padding: 15px;
+  border-radius: 15px;
+  border: 2px solid rgba(100, 114, 125, 0.2);
+}

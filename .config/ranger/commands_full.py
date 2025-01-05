@@ -125,6 +125,11 @@ class echo(Command):
         self.fm.notify(self.rest(1))
 
 
+
+class scripts(Command):
+    def execute(self):
+        self.fm.cd("~/.config/scripts/")
+
 class cd(Command):
     """:cd [-r] <path>
 
