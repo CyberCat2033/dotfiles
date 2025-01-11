@@ -11,12 +11,17 @@ if [ "$activeplayer" == "cmus" ]; then
   metadata=$(cmus-remote -Q | awk '
     /^tag artist/ {artist=substr($0, index($0,$3))}
     /^tag album / {album=substr($0, index($0,$3))}
+    /^tag albumartist/ {albumartist=substr($0, index($0,$3))}
     /^tag title/ {title=substr($0, index($0,$3))}
     /^file/ {file=substr($0, index($0,$2))}
     /^status/ {status=toupper(substr($2,1,1)) substr($2,2)}
-    END {print artist "§" album "§" title "§" file "§" status}')
+    END {print artist "§" album "§" albumartist "§" title "§" file "§" status}')
 
-  IFS='§' read -r artist album title file status <<<"$metadata"
+  IFS='§' read -r artist album albumartist title file status <<<"$metadata"
+
+  if [ -z "$artist" ]; then
+    artist="$albumartist"
+  fi
 
   current_metadata="$album"
   last_metadata=$(cat "$cache_metadata" 2>/dev/null || echo "")
@@ -26,11 +31,7 @@ if [ "$activeplayer" == "cmus" ]; then
   fi
   echo "$current_metadata" >"$cache_metadata"
 
-  if [ -f "$file" ]; then
-    ~/.config/scripts/bins/extract_album_art -i "$file" -o "$cover_path" &>/dev/null || rm -f "$cover_path"
-  else
-    rm -f "$cover_path"
-  fi
+  ~/.config/scripts/bins/extract_album_art -i "$file" -o "$cover_path" || rm -f "$cover_path"
 else
   sleep 0.55
   metadata=$(playerctl metadata --format '{{mpris:artUrl}}§{{status}}§{{artist}}§{{album}}§{{title}}' 2>/dev/null)

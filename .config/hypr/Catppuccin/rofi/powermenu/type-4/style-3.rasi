@@ -30,7 +30,7 @@ configuration {
 
     background-window:           #1e1e2ed8;
     background-normal:           white/5%;
-    background-selected:         white/15%;
+    background-selected:         #f2cdcd2a;
     foreground-normal:           white;
     foreground-selected:         white;
 }

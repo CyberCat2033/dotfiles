@@ -1,6 +1,6 @@
 # GLOBAL
 #sort=+time
-# layer=overlay
+layer=overlay
 
 # STYLE
 font=JetBrains Mono 12

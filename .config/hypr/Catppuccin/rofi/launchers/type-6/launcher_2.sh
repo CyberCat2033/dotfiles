@@ -15,6 +15,7 @@ theme='style-2'
 
 ## Run
 rofi \
-  -show drun \
+  -location 1 \
+  -xoffset 100 -yoffset 150 -show drun \
   -theme ${dir}/${theme}.rasi \
   -icon-theme Tela-circle-black
