@@ -38,4 +38,4 @@ if [ "$temp" == "processed" ]; then
   exit 1
 fi
 
-echo "$ICON$temp"
+echo "{\"alt\": \"""$ICON""\",\"text\": \"""$temp""\",}"

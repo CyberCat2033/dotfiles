@@ -7,4 +7,4 @@ notify-send \
   --hint=int:transient:1 \
   --hint=string:x-canonical-private-synchronous:7777 \
   -u critical \
-  "Brightness" "$current_brightness"
+  "Brightness (eDP)" "$current_brightness"

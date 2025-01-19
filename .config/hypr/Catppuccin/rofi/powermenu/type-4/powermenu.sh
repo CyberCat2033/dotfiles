@@ -50,7 +50,7 @@ run_cmd() {
     case $1 in
     '--shut')
       echo "Shutting down..."
-      sleep 0.5
+      ddcutil setvcp D6 05 | sleep 0.5
       systemctl poweroff
       ;;
     '--sus')

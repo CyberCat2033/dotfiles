@@ -52,7 +52,7 @@ fi
 
 if [ -f "$cover_path" ]; then
 
-  [ -e "/tmp/command_socket" ] || ~/.config/scripts/bins/image_processor
+  [ -e "/tmp/command_socket" ] || ~/.config/scripts/bins/image_processorNearest1901
   echo -n "process" | socat - UNIX-CONNECT:/tmp/command_socket
 else
   cp "/usr/share/icons/Tela-circle-black/scalable/apps/com.github.neithern.g4music.svg" "$rounded_cover"

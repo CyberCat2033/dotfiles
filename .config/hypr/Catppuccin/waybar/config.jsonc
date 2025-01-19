@@ -4,7 +4,7 @@
   "margin-top": 10,
 
   "modules-left": ["custom/menu", "hyprland/workspaces", "hyprland/window"],
-  "modules-center": ["custom/playerctl", "cpu", "memory", "custom/weather"], //"custom/weather"
+  "modules-center": ["mpris", "cpu", "memory", "temperature", "custom/weather"],
   "modules-right": [
     "tray",
     "network",
@@ -39,41 +39,55 @@
     "separate-outputs": false,
   },
 
-  "custom/playerctl": {
-    "format": "<span color='#89b4fa'>{icon}</span>  {0}",
-    "format-icons": {
-      "Playing": [""],
-      "Paused": [""],
-      "Stopped": [""],
-    },
-    "max-length": 29,
+  "temperature": {
+    // "thermal-zone": 3,
+    "hwmon-path": [
+      "/sys/class/hwmon/hwmon4/temp1_input",
+      "/sys/class/thermal/thermal_zone0/temp",
+    ],
     "interval": 1,
-    "return-type": "json",
-    "exec": "~/.config/scripts/playerctl.sh",
+    "critical-threshold": 65,
+    "format-critical": "<span color='#f38ba8'></span> <span color='#eb5675'>{temperatureC}°C</span>",
+    "format": "<span color='#89b4fa'></span> {temperatureC}°C",
+    "tooltip": true,
+  },
+
+  "mpris": {
+    "format": "<span color='#89b4fa'>{status_icon}</span> {title}",
+    "status-icons": {
+      "paused": "",
+      "playing": "",
+      "stopped": "",
+    },
+    "max-length": 17,
     "on-click": "playerctl play-pause | ~/.config/scripts/playerctl_album.sh",
     "on-scroll-up": "playerctl next | ~/.config/scripts/playerctl_album.sh",
     "on-scroll-down": "playerctl previous | ~/.config/scripts/playerctl_album.sh",
     "escape": true,
     "tooltip": true,
+    "tooltip-format": "{artist} - {title}",
   },
 
   "custom/weather": {
-    "format": "<span color='#fab387'></span>{0}",
+    "format": "<span color='#fab387'>{alt}</span>{0}",
     "interval": 1800,
+    "return-type": "json",
     "exec": "~/.config/scripts/weather.sh",
+    "exec-if": "ping -c 1 8.8.8.8 &> /dev/null",
     "tooltip": true,
+    "tooltip-format": "{}",
   },
 
   "cpu": {
     "format": "<span color='#a6e3a1'> </span> {usage}%",
-    "tooltip": false,
+    "tooltip": true,
     "escape": true,
     "on-click": "kitty --class nmwui btop",
   },
 
   "memory": {
     "format": "<span color='#89b4fa'></span>  {}%",
-    "tooltip": false,
+    "tooltip": true,
     "escape": true,
     "on-click": "kitty --class nmwui btop",
   },
@@ -89,6 +103,7 @@
     "format-disconnected": "󰖪",
     "tooltip-format": "{essid}",
     "on-click": "kitty --class nmwui nmtui",
+    "tooltip": true,
   },
 
   "battery": {
@@ -102,6 +117,7 @@
     "format-plugged": "<span color='#fab387'></span> {capacity}%",
     "format-full": "<span color='#fab387'> {icon}</span> {capacity}%",
     "format-icons": ["", "", "", "", ""],
+    "tooltip": true,
   },
 
   "hyprland/language": {
@@ -117,7 +133,7 @@
       "default": ["", "", ""],
     },
     "on-click": "kitty --class pulsemixer pulsemixer",
-    "tooltip": false,
+    "tooltip": true,
   },
 
   "clock": {

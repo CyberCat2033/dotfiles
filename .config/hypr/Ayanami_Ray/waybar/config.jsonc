@@ -4,7 +4,7 @@
   "margin-top": 10,
 
   "modules-left": ["custom/menu", "hyprland/workspaces", "hyprland/window"],
-  "modules-center": ["custom/playerctl", "cpu", "memory", "custom/weather"], //"custom/weather"
+  "modules-center": ["mpris", "cpu", "memory", "temperature", "custom/weather"],
   "modules-right": [
     "tray",
     "network",
@@ -23,6 +23,18 @@
     "tooltip": false,
   },
 
+  "temperature": {
+    // "thermal-zone": 2,
+    "hwmon-path": [
+      "/sys/class/hwmon/hwmon4/temp1_input",
+      "/sys/class/thermal/thermal_zone0/temp",
+    ],
+    "interval": 1,
+    "critical-threshold": 65,
+    "format-critical": "<span color='#f38ba8'></span> <span color='#eb5675'>{temperatureC}°C</span>",
+    "format": "<span color='#89b4fa'></span> {temperatureC}°C",
+  },
+
   "hyprland/workspaces": {
     "format": "{icon}",
     "on-click": "activate",
@@ -38,41 +50,44 @@
     "format": "{class}",
     "separate-outputs": false,
   },
-  "custom/playerctl": {
-    "format": "<span color='#89b4fa'>{icon}</span>  {0}",
-    "format-icons": {
-      "Playing": [""],
-      "Paused": [""],
-      "Stopped": [""],
+
+  "mpris": {
+    "format": "<span color='#89b4fa'>{status_icon}</span> {title}",
+    // "format-paused": "{status_icon} {dynamic}",
+    "status-icons": {
+      "paused": "",
+      "playing": "",
+      "stopped": "",
     },
-    "max-length": 29,
-    "interval": 1,
-    "return-type": "json",
-    "exec": "~/.config/scripts/playerctl.sh",
+    "max-length": 17,
     "on-click": "playerctl play-pause | ~/.config/scripts/playerctl_album.sh",
     "on-scroll-up": "playerctl next | ~/.config/scripts/playerctl_album.sh",
     "on-scroll-down": "playerctl previous | ~/.config/scripts/playerctl_album.sh",
     "escape": true,
     "tooltip": true,
+    "tooltip-format": "{artist} - {title}",
   },
 
   "custom/weather": {
-    "format": "<span color='#94e2d5'></span>{0}",
+    "format": "<span color='#94e2d5'>{alt}</span>{0}",
     "interval": 1800,
-    "exec": "~/.config/scripts/weather.sh",
+    "return-type": "json",
+    "exec": "~/.config/scripts/weather.sh 2> /dev/null",
+    "exec-if": "ping -c 1 8.8.8.8 &> /dev/null",
     "tooltip": true,
+    "tooltip-format": "{}",
   },
 
   "cpu": {
     "format": "<span color='#a6e3a1'> </span> {usage}%",
-    "tooltip": false,
+    "tooltip": true,
     "escape": true,
     "on-click": "kitty --class nmwui btop",
   },
 
   "memory": {
     "format": "<span color='#89b4fa'></span>  {}%",
-    "tooltip": false,
+    "tooltip": true,
     "escape": true,
     "on-click": "kitty --class nmwui btop",
   },
@@ -116,7 +131,7 @@
       "default": ["", "", ""],
     },
     "on-click": "kitty --class pulsemixer pulsemixer",
-    "tooltip": false,
+    "tooltip": true,
   },
 
   "clock": {
@@ -154,7 +169,4 @@
     "escape": true,
     "tooltip": false,
   },
-
-  // "escape": true,
-  // "exec": "~/.config/hypr/hypr_catppuccin/waybar/mediaplayer.py 2> /dev/null",
 }

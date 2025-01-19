@@ -4,6 +4,8 @@
 [manager]
 prepend_keymap = [
   {on = "W", run  = "plugin max-preview", desc = "Maximize or restore preview"},
+  {on = "<F2>", run = "rename", desc = "Rename the selected files"},
+  { on = "<F10>", run = "close", desc = "Close current tab"},
   { on = "l", run  = "plugin smart-enter", desc = "Enter the child directory, or open the file"},
   { on = "<Enter>", run  = "plugin smart-enter", desc = "Enter the child directory, or open the file"},
   { on = "<Right>", run  = "plugin smart-enter", desc = "Enter the child directory, or open the file"},
@@ -77,7 +79,7 @@ append_keymap = [
   { on = [
     "g",
     "s",
-  ], run = "cd ~/pictures/screenshots/", desc = "Go to the screenshots directory" },
+  ], run = "cd ~/.config/scripts/", desc = "Go to the scripts directory" },
   { on = [
     "g",
     "D",

@@ -14,9 +14,7 @@
 
 std::string normalizeCUEPath(const char *filePath) {
   std::string path(filePath);
-  if (path.rfind("cue://", 0) == 0) {
-    path = path.substr(6); // Удаляет "cue://"
-  }
+  path = path.substr(6);
   std::size_t pos = path.find_last_of('/');
   if (pos != std::string::npos && pos < path.size() - 1) {
     path = path.substr(0, pos);
@@ -50,7 +48,6 @@ void extractAlbumArtFLAC(const char *filePath, const char *outputImagePath) {
     for (const auto &entry : std::filesystem::directory_iterator(fileDir)) {
       if (entry.is_regular_file() && (entry.path().extension() == ".jpg" ||
                                       entry.path().extension() == ".png")) {
-        // Copy the first found image to the output path
         std::filesystem::copy_file(
             entry.path(), outputImagePath,
             std::filesystem::copy_options::overwrite_existing);
@@ -107,15 +104,14 @@ void extractAlbumArt(const char *filePath, const char *outputImagePath) {
   if (!extension)
     exit(1);
 
-  if (strcmp(extension, ".mp3") == 0) {
-    extractAlbumArtMP3(filePath, outputImagePath);
-  } else if (strcmp(extension, ".flac") == 0) {
+  if (strcmp(extension, ".flac") == 0) {
     extractAlbumArtFLAC(filePath, outputImagePath);
+  } else if (strncmp(extension, ".cue", 4) == 0) {
+    extractAlbumArtCUE(normalizeCUEPath(filePath), outputImagePath);
+  } else if (strcmp(extension, ".mp3") == 0) {
+    extractAlbumArtMP3(filePath, outputImagePath);
   } else if (strcmp(extension, ".m4a") == 0 || strcmp(extension, ".mp4") == 0) {
     extractAlbumArtMP4(filePath, outputImagePath);
-  } else if (strncmp(extension, ".cue", 4) == 0) {
-    std::string normalizedPath = normalizeCUEPath(filePath);
-    extractAlbumArtCUE(normalizedPath, outputImagePath);
   } else {
     exit(1);
   }

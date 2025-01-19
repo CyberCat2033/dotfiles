@@ -74,6 +74,7 @@ button:hover {
   border-radius: 20;
 }
 
+#temperature,
 #custom-weather {
   color: @fg;
   background-color: @bg2;
@@ -83,7 +84,7 @@ button:hover {
   padding: 2 10;
 }
 
-#custom-playerctl {
+#mpris {
   padding: 2 15;
   margin: 5;
   color: @fg;
@@ -100,6 +101,8 @@ button:hover {
   border: none;
   border-radius: 20;
 }
+
+#temperature:hover,
 #custom-weather:hover,
 #custom-cmus:hover {
   color: @yellow;
@@ -218,7 +221,7 @@ button:hover {
 }
 
 tooltip {
-  background: @bg;
+  background: @bg2;
   margin: 20px;
   padding: 15px;
   border: 20px solid rgba(100, 114, 125, 0);

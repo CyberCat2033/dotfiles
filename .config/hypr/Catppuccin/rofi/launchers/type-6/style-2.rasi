@@ -32,14 +32,11 @@ configuration {
 
 /*****----- Main Window -----*****/
 window {
-    /* properties for window widget */
     transparency:                "real";
-    location:                    center;
-    anchor:                      center;
     fullscreen:                  false;
     width:                       800px;
-    x-offset:                    -537px;
-    y-offset:                    -240px;
+    x-offset:                    0px;
+    y-offset:                    0px;
 
     /* properties for all widgets */
     enabled:                     true;
