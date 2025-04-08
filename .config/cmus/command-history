@@ -1,30 +1,93 @@
 q
-set dsp.jack.resampling_quality=2
-set buffer_size 512
-set buffer_sizw 512
-:set buffer_size 512
+live-filter 
+live-filter Luck
+live-filter Miyagi
+live-filter Jekyl
+live-filter Mozar
+filter metal
+filter metall
+filter 
+filter Metal
+filter genre="Metall"
+filter gener="Rap"
+filter genre="Rap"
+filter gennre=Rap
+filter rap
+live-filter Nyanners
+L Nyanners
+bind -f common N search-prev
+live-filter Volta
+filter play_count=0
+filter count=1
+filter date<=1990
+filter date>=1990
+filter date==2000
+set lib_add_filter=
+set lib_add_filter=year
+set lib_sort=albumartist date album discnumber tracknumber title filename play_count
+set lib_add_filter=\
+filter year=200
+fset unheard=play_count=0
+live-filter LP
+live-filter
+shell 
+wq
+w
+update
+add ~/Music
+filter
+cmus --plugins
+metall
+live-filter Metal
+live-filter metall
+live-filter Metall
+live-filter Vinyl
+scan
+live-filter Rage
+set pl_env_vars=
+set status_display_program= 
+set status_display_program=
+set dsp.alsa.device=default
+set dsp.ao.device_interface=
+set dsp.ao.device_interface=usb
+set dsp.ao.driver=alsa09
+set dsp.ao.driver=
+set dsp.oss.device=
+set dsp.jack.server_name=
+set mixer.oss.channel=PCM
+set show_current_bitrate=true
+set softvol=false
+set softvol_state=10 10
+set softvol_state= 100 100
+set softvol=true
+set mpris=true
+set mpris=false
+set mouse=true
 set output_plugin=pulse
 set output_plugin=jack
 set output_plugin=alsa
 set output_plugin=pipewire
 set output_plugin=
-update
+colorscheme catppuccin
+live-filter Кип
+filter rock
+filter classical
+filter lofi
+set dsp.jack.resampling_quality=2
+set buffer_size 512
+set buffer_sizw 512
+:set buffer_size 512
 filter electro
 fset electro=genre="Electro"
-filter 
 filter electronic
 fset electronic=genre="Electronic"
-filter lofi
 fset lofi=genre="Lo-Fi"
-filter rock
 fset rock=genre="Rock"
 fset ogg-or-mp3=ogg|mp3
-filter metal
 fset metal=genre="Metal"
 add 
 add
 bind common A add
-filter classical
 filter Classical
 F Classical
 fset classical=genre="Classical"
@@ -33,7 +96,6 @@ set progress_bar=color
 set progress_bar=color_shuttle
 set progress_bar=color_shutle
 set progress_bar=
-w
 set replaygain_preamp=0.100000
 set replaygain_preamp=1.100000
 set replaygain=album
@@ -47,7 +109,6 @@ bind -f browser space win-activate
 bind -f common i win-sel-cur
 bind common <space> player-pause-playback
 bind common <^space> player-pause-playback
-wq
 set color_trackwin_album_fg=default
 set color_trackwin_album_fg=red
 set color_trackwin_album_bg=default
@@ -57,7 +118,6 @@ set color_trackwin_album_bglightred
 set color_trackwin_album_bg=rose
 set color_trackwin_album_bg=true
 set color_trackwin_album_attr=bold
-live-filter 
 set dsp.coreaudio.enable_hog_mode true
 dsp.coreaudio.enable_hog_mode true
 help
@@ -68,7 +128,6 @@ vol 100
 live-filter L
 fset 90s=date>=1990&date<2000
 save -l
-live-filter
 live-filter Metallica
 b
 M

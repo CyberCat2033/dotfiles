@@ -20,7 +20,7 @@ case "$condition" in
 *Thunder* | *Storm*)
   ICON=" " # Thunderstorm or Storm
   ;;
-*Snow* | *Freezing* | *Light*Snow*)
+*Snow* | *snow* | *Freezing* | *Light*Snow*)
   ICON=" " # Snow or Freezing drizzle
   ;;
 *Fog* | *Mist* | *Haze* | *Light*rain*shower* | *mist*)

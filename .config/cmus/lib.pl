@@ -1,5 +1,3 @@
-/home/cybercat/Music/My Music/Metallica/1991 - Metallica (VINYL)/LP1.flac
-/home/cybercat/Music/My Music/Metallica/1991 - Metallica (VINYL)/LP2.flac
 /home/cybercat/Music/My Music/김진산/2022 - Crow/01. Crow.mp3
 /home/cybercat/Music/My Music/$uicideboy$/2017 - YUNGDEATHLILLIFE/03. Lte.flac
 /home/cybercat/Music/My Music/25 17/2010 - Зебра/15. Жду чуда.flac
@@ -68,10 +66,17 @@ cue:///home/cybercat/Music/My Music/AC DC/2020 - Power Up Ltd (Vinyl)/AC-DC - Po
 cue:///home/cybercat/Music/My Music/AC DC/2020 - Power Up Ltd (Vinyl)/AC-DC - Power Up [Limited Edition Box 13 Nov 2020 US].cue/10
 cue:///home/cybercat/Music/My Music/AC DC/2020 - Power Up Ltd (Vinyl)/AC-DC - Power Up [Limited Edition Box 13 Nov 2020 US].cue/11
 cue:///home/cybercat/Music/My Music/AC DC/2020 - Power Up Ltd (Vinyl)/AC-DC - Power Up [Limited Edition Box 13 Nov 2020 US].cue/12
+/home/cybercat/Music/My Music/AC DC/1979 - Highway To Hell/01. Highway To Hell.dsf
+/home/cybercat/Music/My Music/AC DC/1979 - Highway To Hell/06. Shot Down In Flames.dsf
+/home/cybercat/Music/My Music/AC DC/1979 - Highway To Hell/08. If You Want Blood (You've Got It).dsf
 /home/cybercat/Music/My Music/AC DC/1995 - Ballbreaker/01. Hard as a Rock.flac
 /home/cybercat/Music/My Music/AC DC/1997 - Bonfire/01. Hells Bells.flac
 /home/cybercat/Music/My Music/AC DC/2009 - Backtracks/07. Dirty Deeds Done Dirt Cheap (Original Australian Release).flac
 /home/cybercat/Music/My Music/AC DC/2009 - Backtracks/17. Big Gun.flac
+/home/cybercat/Music/My Music/AC DC/2010 - Iron Man 2/B1 Back In Black.dsf
+/home/cybercat/Music/My Music/AC DC/2010 - Iron Man 2/D3 Highway To Hell.dsf
+/home/cybercat/Music/My Music/AC DC/2010 - Iron Man 2/B2 Thunderstruck.dsf
+/home/cybercat/Music/My Music/AC DC/2010 - Iron Man 2/C1 T.N.T..dsf
 /home/cybercat/Music/My Music/Adept/2016 - Sleepless/04. Carry the Weight.flac
 /home/cybercat/Music/My Music/Ado/2020 - うっせぇわ/01. Usseewa.mp3
 /home/cybercat/Music/My Music/Ado/2022 - Kyougen/01. Readymade.mp3
@@ -720,7 +725,7 @@ cue:///home/cybercat/Music/My Music/Disturbed/2022 - Divisive/Disturbed - Divisi
 /home/cybercat/Music/My Music/Five Finger Death Punch/2013 - The Wrong Side Of Heaven And The Righteous Side Of Hell, Volume 1 (Deluxe)/01. Lift Me Up.flac
 /home/cybercat/Music/My Music/Five Finger Death Punch/2013 - The Wrong Side Of Heaven And The Righteous Side Of Hell, Volume 1 (Deluxe)/04. Wrong Side of Heaven.flac
 /home/cybercat/Music/My Music/Five Finger Death Punch/2013 - The Wrong Side Of Heaven And The Righteous Side Of Hell, Volume 1 (Deluxe)/05. Burn MF.flac
-/home/cybercat/Music/My Music/Five Finger Death Punch/2013 - The Wrong Side Of Heaven And The Righteous Side Of Hell Volume 1 Deluxe/10. Mama Said Knock You Out.flac
+/home/cybercat/Music/My Music/Five Finger Death Punch/2013 - The Wrong Side Of Heaven And The Righteous Side Of Hell, Volume 1 (Deluxe)/10. Mama Said Knock You Out.flac
 /home/cybercat/Music/My Music/Five Finger Death Punch/2015 - Got Your Six/02. Jekyll and Hyde.flac
 /home/cybercat/Music/My Music/Five Finger Death Punch/2015 - Got Your Six/03. Wash It All Away.flac
 /home/cybercat/Music/My Music/Five Finger Death Punch/2015 - Got Your Six/12. You're Not My Kind.flac
@@ -732,7 +737,7 @@ cue:///home/cybercat/Music/My Music/Disturbed/2022 - Divisive/Disturbed - Divisi
 /home/cybercat/Music/My Music/Five Finger Death Punch/2018 - And Justice for None (Deluxe)/03. Top Of The World.flac
 /home/cybercat/Music/My Music/Five Finger Death Punch/2018 - And Justice for None (Deluxe)/13. Bloody.flac
 /home/cybercat/Music/My Music/Five Finger Death Punch/2018 - And Justice for None (Deluxe)/15. Bad Seed.flac
-/home/cybercat/Music/My Music/Five Finger Death Punch/2018 - And Justice for None Deluxe/16. Save Your Breath.flac
+/home/cybercat/Music/My Music/Five Finger Death Punch/2018 - And Justice for None (Deluxe)/16. Save Your Breath.flac
 /home/cybercat/Music/My Music/Five Finger Death Punch/2020 - A Decade of Destruction Vol. 2/04. I Refuse.flac
 /home/cybercat/Music/My Music/Five Finger Death Punch/2020 - A Decade of Destruction Vol. 2/10. M.I.N.E (End This Way).flac
 /home/cybercat/Music/My Music/Five Finger Death Punch/2020 - A Decade of Destruction Vol. 2/11. Hell To Pay.flac
@@ -1194,6 +1199,18 @@ cue:///home/cybercat/Music/My Music/Halestorm/2012 - The Strange Case Of... (Vin
 /home/cybercat/Music/My Music/Mercuzio Pianist/2013 - Hidden Gems Vol. 1/14. Jy suis jamais allé.flac
 /home/cybercat/Music/My Music/Merk  Kremont/2018 - Hands Up/01. Hands Up.flac
 /home/cybercat/Music/My Music/Metallica/1986 - Master Of Puppets Remastered/02. Master Of Puppets.mp3
+/home/cybercat/Music/My Music/Metallica/1991 - Metallica (Vinyl)/01. Enter Sandman.flac
+/home/cybercat/Music/My Music/Metallica/1991 - Metallica (Vinyl)/02. Sad But True.flac
+/home/cybercat/Music/My Music/Metallica/1991 - Metallica (Vinyl)/03. Holier Than Thou.flac
+/home/cybercat/Music/My Music/Metallica/1991 - Metallica (Vinyl)/04. The Unforgiven.flac
+/home/cybercat/Music/My Music/Metallica/1991 - Metallica (Vinyl)/05. Wherever I May Roam.flac
+/home/cybercat/Music/My Music/Metallica/1991 - Metallica (Vinyl)/06. Don't Tread On Me.flac
+/home/cybercat/Music/My Music/Metallica/1991 - Metallica (Vinyl)/07. Through The Never.flac
+/home/cybercat/Music/My Music/Metallica/1991 - Metallica (Vinyl)/08. Nothing Else Matters.flac
+/home/cybercat/Music/My Music/Metallica/1991 - Metallica (Vinyl)/09. Of Wolf And Man.flac
+/home/cybercat/Music/My Music/Metallica/1991 - Metallica (Vinyl)/10. The God That Failed.flac
+/home/cybercat/Music/My Music/Metallica/1991 - Metallica (Vinyl)/11. My Friend Of Misery.flac
+/home/cybercat/Music/My Music/Metallica/1991 - Metallica (Vinyl)/12. The Struggle Within.flac
 /home/cybercat/Music/My Music/Metallica/1998 - Garage Inc/05. Die Die My Darling.mp3
 /home/cybercat/Music/My Music/Metalocalypse Dethklok/2007 - The Dethalbum/01. Murmaider.flac
 /home/cybercat/Music/My Music/Metalocalypse Dethklok/2007 - The Dethalbum/03. Awaken.flac
@@ -2085,6 +2102,17 @@ cue:///home/cybercat/Music/My Music/Twisted Sister/1985 - Come Out And Play (Vin
 /home/cybercat/Music/My Music/Virtual Riot/2020 - Head To Head/2. Wompum VIP.flac
 /home/cybercat/Music/My Music/Vision Vision/2017 - Ready for the Devil (No Mercy)/01. Ready for the Devil (No Mercy).flac
 /home/cybercat/Music/My Music/V O E/2021 - Fight You/1. Fight You.flac
+cue:///home/cybercat/Music/My Music/Aurelio Voltaire/1998 - The Devil's Bris/Voltaire - The Devil's Bris.cue/1
+cue:///home/cybercat/Music/My Music/Aurelio Voltaire/1998 - The Devil's Bris/Voltaire - The Devil's Bris.cue/2
+cue:///home/cybercat/Music/My Music/Aurelio Voltaire/1998 - The Devil's Bris/Voltaire - The Devil's Bris.cue/3
+cue:///home/cybercat/Music/My Music/Aurelio Voltaire/1998 - The Devil's Bris/Voltaire - The Devil's Bris.cue/4
+cue:///home/cybercat/Music/My Music/Aurelio Voltaire/1998 - The Devil's Bris/Voltaire - The Devil's Bris.cue/5
+cue:///home/cybercat/Music/My Music/Aurelio Voltaire/1998 - The Devil's Bris/Voltaire - The Devil's Bris.cue/6
+cue:///home/cybercat/Music/My Music/Aurelio Voltaire/1998 - The Devil's Bris/Voltaire - The Devil's Bris.cue/7
+cue:///home/cybercat/Music/My Music/Aurelio Voltaire/1998 - The Devil's Bris/Voltaire - The Devil's Bris.cue/8
+cue:///home/cybercat/Music/My Music/Aurelio Voltaire/1998 - The Devil's Bris/Voltaire - The Devil's Bris.cue/9
+cue:///home/cybercat/Music/My Music/Aurelio Voltaire/1998 - The Devil's Bris/Voltaire - The Devil's Bris.cue/10
+cue:///home/cybercat/Music/My Music/Aurelio Voltaire/1998 - The Devil's Bris/Voltaire - The Devil's Bris.cue/11
 cue:///home/cybercat/Music/My Music/Aurelio Voltaire/1998 - The Devil's Bris/Voltaire - The Devil's Bris.cue/12
 /home/cybercat/Music/My Music/Vomitory/2023 - All Heads Are Gonna Roll/01. All Heads Are Gonna Roll.flac
 /home/cybercat/Music/My Music/WarKings/2021 - Fight/01. Fight.mp3
@@ -2212,10 +2240,6 @@ cue:///home/cybercat/Music/My Music/Aurelio Voltaire/1998 - The Devil's Bris/Vol
 /home/cybercat/Music/My Music/Браво/2016 - The Best Of/15. Любите, девушки.flac
 /home/cybercat/Music/My Music/Браво/2016 - The Best Of/17. Этот город.flac
 /home/cybercat/Music/My Music/Браво/2016 - The Best Of/20. Это за окном рассвет.flac
-/home/cybercat/Music/My Music/Братство Бобра/2018 - Братство бобра/4. Енот некромант.flac
-/home/cybercat/Music/My Music/БѢСЪ/2021 - Кощунства 2021 Remastered/04. Чърнобогъ 2021 Remastered.flac
-/home/cybercat/Music/My Music/БѢСЪ/2021 - Кощунства 2021 Remastered/05. Лиху Слѧхъ 2021 Remastered.flac
-/home/cybercat/Music/My Music/БѢСЪ/2023 - Авсень/01. Авсень.flac
 /home/cybercat/Music/My Music/Валентин Стрыкало/2012 - Смирись и расслабься/07. Кайен.flac
 /home/cybercat/Music/My Music/Валентин Стрыкало/2012 - Смирись и расслабься/09. Лишь однажды.flac
 /home/cybercat/Music/My Music/Валентин Стрыкало/2012 - Смирись и расслабься/10. Наше лето.flac
@@ -2299,7 +2323,6 @@ cue:///home/cybercat/Music/My Music/Aurelio Voltaire/1998 - The Devil's Bris/Vol
 /home/cybercat/Music/My Music/Кипелов/2005 - Реки времён/01. На распутье.flac
 /home/cybercat/Music/My Music/Кипелов/2005 - Реки времён/02. Дыханье тьмы.flac
 /home/cybercat/Music/My Music/Кипелов/2005 - Реки времён/06. Я здесь.flac
-/home/cybercat/Music/My Music/Кипелов/2013 - Вавилон/01. Вавилон.flac
 /home/cybercat/Music/My Music/Кипелов/2015 - Жить вопреки/02. Жить вопреки.flac
 /home/cybercat/Music/My Music/Кипелов/2017 - Звезды и Кресты/06. Белый Ад.flac
 /home/cybercat/Music/My Music/Кирпичи/2002 - Сила ума/02. ДЖЕДАИ.flac
