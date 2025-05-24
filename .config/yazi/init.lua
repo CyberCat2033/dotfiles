@@ -186,4 +186,4 @@ require("yatline-githead"):setup({
 	behind_color = catppuccin_palette.yellow,
 })
 
-require("git"):setup()
+-- require("git"):setup()

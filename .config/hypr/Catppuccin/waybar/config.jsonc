@@ -49,7 +49,6 @@
     "critical-threshold": 65,
     "format-critical": "<span color='#f38ba8'></span> <span color='#eb5675'>{temperatureC}°C</span>",
     "format": "<span color='#89b4fa'></span> {temperatureC}°C",
-    "tooltip": true,
   },
 
   "mpris": {

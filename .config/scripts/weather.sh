@@ -14,7 +14,7 @@ case "$condition" in
 *Cloudy* | *Overcast*)
   ICON=" " # Cloudy or Overcast
   ;;
-*Rain* | *Light* | *Showers*)
+*Rain* | *rain* | *Light* | *Showers*)
   ICON=" " # Rain or Showers
   ;;
 *Thunder* | *Storm*)
