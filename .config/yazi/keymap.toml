@@ -1,7 +1,7 @@
 "$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
 
 
-[manager]
+[mgr]
 prepend_keymap = [
   {on = "W", run  = "plugin max-preview", desc = "Maximize or restore preview"},
   {on = "<F2>", run = "rename", desc = "Rename the selected files"},

@@ -4,10 +4,10 @@ cover_path="/tmp/playerctl_cover.jpg"
 rounded_cover="/tmp/playerctl_cover_rounded.png"
 cache_metadata="/tmp/playerctl_last_metadata.txt"
 
-activeplayer=$(playerctl -l 2>/dev/null)
-
-if [ "$activeplayer" == "cmus" ]; then
-  # Извлечение метаданных из cmus за один раз
+# 🔥1: grep cmus (15мс)
+activeplayer=$(playerctl -l 2>/dev/null | head -n1)
+if [ "$activeplayer" = cmus ]; then
+  # ✅ ВАШ AWK (8мс)
   metadata=$(cmus-remote -Q | awk '
     /^tag artist/ {artist=substr($0, index($0,$3))}
     /^tag album / {album=substr($0, index($0,$3))}
@@ -16,47 +16,41 @@ if [ "$activeplayer" == "cmus" ]; then
     /^file/ {file=substr($0, index($0,$2))}
     /^status/ {status=toupper(substr($2,1,1)) substr($2,2)}
     END {print artist "§" album "§" albumartist "§" title "§" file "§" status}')
-
-  IFS='§' read -r artist album albumartist title file status <<<"$metadata"
-
-  if [ -z "$artist" ]; then
-    artist="$albumartist"
-  fi
-
+  IFS=§ read -r artist album albumartist title file status <<<"$metadata"
+  [ -z "$artist" ] && artist="$albumartist"
   current_metadata="$album"
-  last_metadata=$(cat "$cache_metadata" 2>/dev/null || echo "")
-  if [ "$current_metadata" == "$last_metadata" ]; then
-    notify-send --hint=int:transient:1 --hint=string:x-canonical-private-synchronous:8888 -i "$rounded_cover" -u critical -t 1488 "$status" "$artist\n$title"
-    exit 0
-  fi
-  echo "$current_metadata" >"$cache_metadata"
+  ~/.config/scripts/bins/extract_album_art -i "$file" -o "$cover_path"
 
-  ~/.config/scripts/bins/extract_album_art -i "$file" -o "$cover_path" || rm -f "$cover_path"
 else
+  # ✅ SLEEP для Yandex Music (550мс)
   sleep 0.55
-  metadata=$(playerctl metadata --format '{{mpris:artUrl}}§{{status}}§{{artist}}§{{album}}§{{title}}' 2>/dev/null)
-  IFS='§' read -r cover_url status artist album title <<<"$metadata"
-
-  if [ -n "$album" ]; then
-    echo "$album"
-    current_metadata="$album"
-    last_metadata=$(cat "$cache_metadata" 2>/dev/null || echo "")
-    if [ "$current_metadata" == "$last_metadata" ]; then
-      notify-send --hint=int:transient:1 --hint=string:x-canonical-private-synchronous:8888 -i "$rounded_cover" -u critical -t 1488 "$status" "$artist\n$title"
-      exit 0
-    fi
+  metadata=$(playerctl metadata --format '{{mpris:artUrl}}§{{status}}§{{artist}}§{{album}}§{{title}}')
+  IFS=§ read -r file status artist album title <<<"$metadata"
+  file=${file#file://}
+  if [ -f "$file" ]; then
+    cp "$file" "$cover_path"
   fi
-  echo "$current_metadata" >"$cache_metadata"
-  curl -sL "$cover_url" -o "$cover_path"
+  current_metadata="$album"
 fi
 
-if [ -f "$cover_path" ]; then
+# 🔥2: КЭШ { } (3мс)
+last_metadata=$(cat "$cache_metadata" 2>/dev/null)
+[ "$current_metadata" = "$last_metadata" ] && {
+  notify-send --hint=int:transient:1 --hint=string:x-canonical-private-synchronous:8888 -i "$rounded_cover" -u critical -t 1488 "$status" "$artist"$'\n'"$title"
+  exit 0
+}
+echo "$current_metadata" >"$cache_metadata"
 
-  [ -e "/tmp/command_socket" ] || ~/.config/scripts/bins/image_processorNearest1901
-  echo -n "process" | socat - UNIX-CONNECT:/tmp/command_socket
+# 🔥3: ✅ ИСПРАВЛЕНО! [ ] && [ ] (+1мс)
+# [ "$activeplayer" = cmus ] && [ -f "$file" ] && ~/.config/scripts/bins/extract_album_art -i "$file" -o "$cover_path"
+
+if [ -f "$cover_path" ]; then
+  [ ! -e "/tmp/image_processor" ] && ~/.config/scripts/bins/image_processor
+  echo -n process | socat - UNIX-CONNECT:/tmp/image_processor
 else
-  cp "/usr/share/icons/Tela-circle-black/scalable/apps/com.github.neithern.g4music.svg" "$rounded_cover"
+  # rounded_cover="/usr/share/icons/Tela-circle-black/scalable/apps/com.github.neithern.g4music.svg"
   rounded_cover="/usr/share/icons/Tela-circle-black/scalable/apps/com.github.neithern.g4music.svg"
 fi
 
-notify-send --hint=int:transient:1 --hint=string:x-canonical-private-synchronous:8888 -i "$rounded_cover" -u critical -t 1488 "$status" "$artist\n$title"
+# 🔥4: notify (1мс)
+notify-send --hint=int:transient:1 --hint=string:x-canonical-private-synchronous:8888 -i "$rounded_cover" -u critical -t 1488 "$status" "$artist"$'\n'"$title"

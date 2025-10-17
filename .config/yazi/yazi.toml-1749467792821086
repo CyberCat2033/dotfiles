@@ -1,0 +1,106 @@
+"$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
+
+[manager]
+ratio = [1, 4, 3]
+sort_by = "natural"
+sort_dir_first = true
+show_hidden = true
+show_symlink = true
+title_format = "{cwd}"
+
+
+[preview]
+warp = "yes"
+
+
+[opener]
+folder = [
+  { run = 'kitty --detach nvim "$@"', orphan = true, desc = "neovim (detached)", for = "linux" },
+  { run = 'kitty "$@"', orphan = true, desc = "kitty", for = "linux" },
+  { run = 'code  "$@"', orphan = true, desc = "vscode", for = "linux" },
+  { run = '''fish -c "lazygit -p "$1""''', block = true, desc = "lazygit", for = "linux" },
+  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "linux" },
+]
+
+text = [
+  { run = 'nvim "$@"', block = true, desc = "neovim", for = "linux" },
+  { run = 'kitty --detach nvim "$@"', block = true, desc = "neovim (detached)", for = "linux" },
+  { run = 'code  "$@"', orphan = true, desc = "vscode", for = "linux" },
+  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "linux" },
+]
+
+document = [
+  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "linux" },
+  { run = 'libreoffice "$@"', orphan = true, desc = "libreoffice", for = "linux" },
+]
+
+image = [
+  { run = 'viewnior "$@"', orphan = true, desc = "viewnior", for = "linux" },
+]
+
+video = [
+  { run = 'mpv "$@"', orphan = true, desc = "mpv", for = "linux" },
+  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "linux" },
+]
+
+audio = [
+  { run = 'mpv "$@"', orphan = true, desc = "mpv", for = "linux" },
+  { run = 'vlc "$@"', orphan = true, desc = "vlc", for = "linux" },
+  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "linux" },
+]
+
+archive = [
+  { run = 'file-roller "$@"', orphan = true, desc = "file-roller", for = "linux" },
+  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "linux" },
+]
+
+fallback = [
+  { run = 'nvim "$@"', block = true, desc = "neovim", for = "linux" },
+  { run = 'xdg-open "$@"', orphan = true, desc = "xdg-open", for = "linux" },
+]
+
+[open]
+rules = [
+  { name = "*/", use = "folder" },
+  { mime = "text/*", use = "text" },
+  { mime = "image/*", use = "image" },
+  { mime = "video/*", use = "video" },
+  { mime = "application/octet-stream", use = "video" },
+  { mime = "audio/*", use = "audio" },
+  { mime = "inode/x-empty", use = "text" },
+  { mime = "application/json", use = "text" },
+  { mime = "application/zip", use = "archive" },
+  { mime = "application/gzip", use = "archive" },
+  { mime = "application/x-bzip", use = "archive" },
+  { mime = "application/x-bzip2", use = "archive" },
+  { mime = "application/x-tar", use = "archive" },
+  { mime = "application/tar", use = "archive" },
+  { mime = "application/x-7z-compressed", use = "archive" },
+  { mime = "application/x-rar", use = "archive" },
+  { mime = "application/pdf", use = "document" },
+  { mime = "application/epub+zip", use = "document" },
+  { mime = "application/x-mobipocket-ebook", use = "document" },
+
+  { mime = "*", use = "fallback" },
+]
+
+[[plugin.prepend_fetchers]]
+id = "git"
+name = "*"
+run = "git"
+
+[[plugin.prepend_fetchers]]
+id = "git"
+name = "*/"
+run = "git"
+
+[plugin]
+
+prepend_previewers = [
+    { name = "*.csv", run = "rich-preview"}, # for csv files
+    { name = "*.md", run = "rich-preview" }, # for markdown (.md) files
+    { name = "*.rst", run = "rich-preview"}, # for restructured text (.rst) files
+    { name = "*.ipynb", run = "rich-preview"}, # for jupyter notebooks (.ipynb)
+    { name = "*.json", run = "rich-preview"}, # for json (.json) files
+    # { name = "*.", run = "rich-preview"} # for particular language files eg. .py, .go., .lua, etc.
+]

@@ -2102,17 +2102,6 @@ cue:///home/cybercat/Music/My Music/Twisted Sister/1985 - Come Out And Play (Vin
 /home/cybercat/Music/My Music/Virtual Riot/2020 - Head To Head/2. Wompum VIP.flac
 /home/cybercat/Music/My Music/Vision Vision/2017 - Ready for the Devil (No Mercy)/01. Ready for the Devil (No Mercy).flac
 /home/cybercat/Music/My Music/V O E/2021 - Fight You/1. Fight You.flac
-cue:///home/cybercat/Music/My Music/Aurelio Voltaire/1998 - The Devil's Bris/Voltaire - The Devil's Bris.cue/1
-cue:///home/cybercat/Music/My Music/Aurelio Voltaire/1998 - The Devil's Bris/Voltaire - The Devil's Bris.cue/2
-cue:///home/cybercat/Music/My Music/Aurelio Voltaire/1998 - The Devil's Bris/Voltaire - The Devil's Bris.cue/3
-cue:///home/cybercat/Music/My Music/Aurelio Voltaire/1998 - The Devil's Bris/Voltaire - The Devil's Bris.cue/4
-cue:///home/cybercat/Music/My Music/Aurelio Voltaire/1998 - The Devil's Bris/Voltaire - The Devil's Bris.cue/5
-cue:///home/cybercat/Music/My Music/Aurelio Voltaire/1998 - The Devil's Bris/Voltaire - The Devil's Bris.cue/6
-cue:///home/cybercat/Music/My Music/Aurelio Voltaire/1998 - The Devil's Bris/Voltaire - The Devil's Bris.cue/7
-cue:///home/cybercat/Music/My Music/Aurelio Voltaire/1998 - The Devil's Bris/Voltaire - The Devil's Bris.cue/8
-cue:///home/cybercat/Music/My Music/Aurelio Voltaire/1998 - The Devil's Bris/Voltaire - The Devil's Bris.cue/9
-cue:///home/cybercat/Music/My Music/Aurelio Voltaire/1998 - The Devil's Bris/Voltaire - The Devil's Bris.cue/10
-cue:///home/cybercat/Music/My Music/Aurelio Voltaire/1998 - The Devil's Bris/Voltaire - The Devil's Bris.cue/11
 cue:///home/cybercat/Music/My Music/Aurelio Voltaire/1998 - The Devil's Bris/Voltaire - The Devil's Bris.cue/12
 /home/cybercat/Music/My Music/Vomitory/2023 - All Heads Are Gonna Roll/01. All Heads Are Gonna Roll.flac
 /home/cybercat/Music/My Music/WarKings/2021 - Fight/01. Fight.mp3

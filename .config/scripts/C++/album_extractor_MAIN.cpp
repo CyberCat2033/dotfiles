@@ -82,13 +82,13 @@ void extractAlbumArtMP3(const char *filePath, const char *outputImagePath) {
   }
 }
 
-void extractAlbumArtCUE(const std::string &cueFilePath,
-                        const std::string &outputImagePath) {
+void extractAlbumArtFromFolder(const std::string &inputFilePath,
+                               const std::string &outputImagePath) {
 
-  std::filesystem::path cueDir =
-      std::filesystem::path(cueFilePath).parent_path();
+  std::filesystem::path parrentDir =
+      std::filesystem::path(inputFilePath).parent_path();
 
-  for (const auto &entry : std::filesystem::directory_iterator(cueDir)) {
+  for (const auto &entry : std::filesystem::directory_iterator(parrentDir)) {
     if (entry.is_regular_file() && (entry.path().extension() == ".jpg" ||
                                     entry.path().extension() == ".png")) {
       std::filesystem::copy_file(
@@ -107,13 +107,16 @@ void extractAlbumArt(const char *filePath, const char *outputImagePath) {
   if (strcmp(extension, ".flac") == 0) {
     extractAlbumArtFLAC(filePath, outputImagePath);
   } else if (strncmp(extension, ".cue", 4) == 0) {
-    extractAlbumArtCUE(normalizeCUEPath(filePath), outputImagePath);
+    extractAlbumArtFromFolder(normalizeCUEPath(filePath), outputImagePath);
   } else if (strcmp(extension, ".mp3") == 0) {
     extractAlbumArtMP3(filePath, outputImagePath);
   } else if (strcmp(extension, ".m4a") == 0 || strcmp(extension, ".mp4") == 0) {
     extractAlbumArtMP4(filePath, outputImagePath);
   } else {
     exit(1);
+  }
+  if (*outputImagePath == '\0') {
+    extractAlbumArtFromFolder(filePath, outputImagePath);
   }
 }
 
