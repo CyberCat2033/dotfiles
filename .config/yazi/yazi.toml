@@ -15,6 +15,7 @@ warp = "yes"
 
 [opener]
 folder = [
+  { run = 'nemo "$@"', orphan = true, desc = "nemo", for = "linux" },
   { run = 'kitty --detach nvim "$@"', orphan = true, desc = "neovim (detached)", for = "linux" },
   { run = 'kitty "$@"', orphan = true, desc = "kitty", for = "linux" },
   { run = 'code  "$@"', orphan = true, desc = "vscode", for = "linux" },

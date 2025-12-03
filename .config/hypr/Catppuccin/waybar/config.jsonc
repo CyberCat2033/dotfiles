@@ -40,7 +40,6 @@
   },
 
   "temperature": {
-    // "thermal-zone": 3,
     "hwmon-path": [
       "/sys/class/hwmon/hwmon4/temp1_input",
       "/sys/class/thermal/thermal_zone0/temp",
@@ -62,9 +61,9 @@
     "on-click": "playerctl play-pause | ~/.config/scripts/playerctl_album.sh",
     "on-scroll-up": "playerctl next | ~/.config/scripts/playerctl_album.sh",
     "on-scroll-down": "playerctl previous | ~/.config/scripts/playerctl_album.sh",
-    "escape": true,
     "tooltip": true,
     "tooltip-format": "{artist} - {title}",
+    "escape": true,
   },
 
   "custom/weather": {
@@ -74,7 +73,8 @@
     "exec": "~/.config/scripts/weather.sh",
     "exec-if": "ping -c 1 8.8.8.8 &> /dev/null",
     "tooltip": true,
-    "tooltip-format": "{}",
+    "tooltip-format": "<span font='14' weight='bold' foreground='#fab387'>{alt}</span> <span font='13'>{text}</span>\n<span font='11' foreground='#cdd6f4'>Moscow, Russia</span>\n<span font='10' foreground='#94e2d5'>Updated every 30 min</span>",
+    "escape": true,
   },
 
   "cpu": {

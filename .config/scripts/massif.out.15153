@@ -1,0 +1,1656 @@
+desc: (none)
+cmd: ./LiveWallpaper.sh
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=1480262
+mem_heap_B=5
+mem_heap_extra_B=19
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=1491473
+mem_heap_B=3812
+mem_heap_extra_B=188
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=1506241
+mem_heap_B=3872
+mem_heap_extra_B=248
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=1515067
+mem_heap_B=3908
+mem_heap_extra_B=284
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=1528843
+mem_heap_B=5728
+mem_heap_extra_B=408
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=1549219
+mem_heap_B=5728
+mem_heap_extra_B=408
+mem_stacks_B=0
+heap_tree=detailed
+n8: 5728 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2864 0x4A4356B: _nl_intern_locale_data (loadlocale.c:156)
+  n1: 2864 0x4A432F3: _nl_load_locale_from_archive (loadarchive.c:477)
+   n1: 2864 0x4A42598: _nl_find_locale (findlocale.c:152)
+    n1: 2864 0x4A45542: setlocale (setlocale.c:337)
+     n1: 2864 0x40A725D: set_default_locale (locale.c:88)
+      n0: 2864 0x401CA84: main (shell.c:419)
+ n1: 1280 0x4A5360D: qsort_r_malloc (qsort.c:377)
+  n1: 1280 0x4A5360D: qsort_r (qsort.c:413)
+   n1: 1280 0x402096D: shell_initialize (shell.c:1927)
+    n0: 1280 0x401D5B7: main (shell.c:580)
+ n1: 792 0x4A4365D: _nl_intern_locale_data (loadlocale.c:156)
+  n1: 792 0x4A432F3: _nl_load_locale_from_archive (loadarchive.c:477)
+   n1: 792 0x4A42598: _nl_find_locale (findlocale.c:152)
+    n1: 792 0x4A45542: setlocale (setlocale.c:337)
+     n1: 792 0x40A725D: set_default_locale (locale.c:88)
+      n0: 792 0x401CA84: main (shell.c:419)
+ n1: 208 0x4A41780: __gconv_lookup_cache (gconv_cache.c:361)
+  n1: 208 0x4A3932E: __gconv_find_transform (gconv_db.c:717)
+   n1: 208 0x4AD3D60: __wcsmbs_getfct (wcsmbsload.c:91)
+    n1: 208 0x4AD3D60: __wcsmbs_load_conv (wcsmbsload.c:187)
+     n1: 208 0x4A52978: get_gconv_fcts (wcsmbsload.h:71)
+      n1: 208 0x4A52978: mblen (mblen.c:45)
+       n1: 208 0x40A72E9: set_default_locale (locale.c:100)
+        n0: 208 0x401CA84: main (shell.c:419)
+ n1: 208 0x4A41862: __gconv_lookup_cache (gconv_cache.c:361)
+  n1: 208 0x4A3932E: __gconv_find_transform (gconv_db.c:717)
+   n1: 208 0x4AD3DA6: __wcsmbs_getfct (wcsmbsload.c:91)
+    n1: 208 0x4AD3DA6: __wcsmbs_load_conv (wcsmbsload.c:190)
+     n1: 208 0x4A52978: get_gconv_fcts (wcsmbsload.h:71)
+      n1: 208 0x4A52978: mblen (mblen.c:45)
+       n1: 208 0x40A72E9: set_default_locale (locale.c:100)
+        n0: 208 0x401CA84: main (shell.c:419)
+ n2: 161 0x4ABE2AF: strdup (strdup.c:42)
+  n1: 144 0x4A45727: setlocale (setlocale.c:366)
+   n1: 144 0x40A725D: set_default_locale (locale.c:88)
+    n0: 144 0x401CA84: main (shell.c:419)
+  n0: 17 in 2 places, all below massif's threshold (1.00%)
+ n1: 120 0x4A4329F: _nl_load_locale_from_archive (loadarchive.c:460)
+  n1: 120 0x4A42598: _nl_find_locale (findlocale.c:152)
+   n1: 120 0x4A45542: setlocale (setlocale.c:337)
+    n1: 120 0x40A725D: set_default_locale (locale.c:88)
+     n0: 120 0x401CA84: main (shell.c:419)
+ n0: 95 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=7
+#-----------
+time=1560523
+mem_heap_B=12802
+mem_heap_extra_B=502
+mem_stacks_B=0
+heap_tree=detailed
+n7: 12802 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8192 0x4083976: UnknownInlinedFun (xmalloc.c:104)
+  n1: 8192 0x4083976: hash_create (hashlib.c:72)
+   n1: 8192 0x4047B95: create_variable_tables.lto_priv.0 (variables.c:352)
+    n1: 8192 0x404E0A5: initialize_shell_variables (variables.c:374)
+     n1: 8192 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 8192 0x401D5B7: main (shell.c:580)
+ n1: 2864 0x4A4356B: _nl_intern_locale_data (loadlocale.c:156)
+  n1: 2864 0x4A432F3: _nl_load_locale_from_archive (loadarchive.c:477)
+   n1: 2864 0x4A42598: _nl_find_locale (findlocale.c:152)
+    n1: 2864 0x4A45542: setlocale (setlocale.c:337)
+     n1: 2864 0x40A725D: set_default_locale (locale.c:88)
+      n0: 2864 0x401CA84: main (shell.c:419)
+ n1: 792 0x4A4365D: _nl_intern_locale_data (loadlocale.c:156)
+  n1: 792 0x4A432F3: _nl_load_locale_from_archive (loadarchive.c:477)
+   n1: 792 0x4A42598: _nl_find_locale (findlocale.c:152)
+    n1: 792 0x4A45542: setlocale (setlocale.c:337)
+     n1: 792 0x40A725D: set_default_locale (locale.c:88)
+      n0: 792 0x401CA84: main (shell.c:419)
+ n0: 377 in 14 places, all below massif's threshold (1.00%)
+ n1: 208 0x4A41780: __gconv_lookup_cache (gconv_cache.c:361)
+  n1: 208 0x4A3932E: __gconv_find_transform (gconv_db.c:717)
+   n1: 208 0x4AD3D60: __wcsmbs_getfct (wcsmbsload.c:91)
+    n1: 208 0x4AD3D60: __wcsmbs_load_conv (wcsmbsload.c:187)
+     n1: 208 0x4A52978: get_gconv_fcts (wcsmbsload.h:71)
+      n1: 208 0x4A52978: mblen (mblen.c:45)
+       n1: 208 0x40A72E9: set_default_locale (locale.c:100)
+        n0: 208 0x401CA84: main (shell.c:419)
+ n1: 208 0x4A41862: __gconv_lookup_cache (gconv_cache.c:361)
+  n1: 208 0x4A3932E: __gconv_find_transform (gconv_db.c:717)
+   n1: 208 0x4AD3DA6: __wcsmbs_getfct (wcsmbsload.c:91)
+    n1: 208 0x4AD3DA6: __wcsmbs_load_conv (wcsmbsload.c:190)
+     n1: 208 0x4A52978: get_gconv_fcts (wcsmbsload.h:71)
+      n1: 208 0x4A52978: mblen (mblen.c:45)
+       n1: 208 0x40A72E9: set_default_locale (locale.c:100)
+        n0: 208 0x401CA84: main (shell.c:419)
+ n2: 161 0x4ABE2AF: strdup (strdup.c:42)
+  n1: 144 0x4A45727: setlocale (setlocale.c:366)
+   n1: 144 0x40A725D: set_default_locale (locale.c:88)
+    n0: 144 0x401CA84: main (shell.c:419)
+  n0: 17 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=8
+#-----------
+time=1572472
+mem_heap_B=21419
+mem_heap_extra_B=717
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=1585029
+mem_heap_B=22771
+mem_heap_extra_B=1317
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=1595558
+mem_heap_B=23765
+mem_heap_extra_B=1875
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=1606748
+mem_heap_B=24866
+mem_heap_extra_B=2502
+mem_stacks_B=0
+heap_tree=detailed
+n10: 24866 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 16384 0x4083976: UnknownInlinedFun (xmalloc.c:104)
+  n3: 16384 0x4083976: hash_create (hashlib.c:72)
+   n1: 8192 0x4047B95: create_variable_tables.lto_priv.0 (variables.c:352)
+    n1: 8192 0x404E0A5: initialize_shell_variables (variables.c:374)
+     n1: 8192 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 8192 0x401D5B7: main (shell.c:580)
+   n1: 4096 0x4047B39: create_variable_tables.lto_priv.0 (variables.c:360)
+    n1: 4096 0x404E0A5: initialize_shell_variables (variables.c:374)
+     n1: 4096 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 4096 0x401D5B7: main (shell.c:580)
+   n1: 4096 0x4047BB9: create_variable_tables.lto_priv.0 (variables.c:356)
+    n1: 4096 0x404E0A5: initialize_shell_variables (variables.c:374)
+     n1: 4096 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 4096 0x401D5B7: main (shell.c:580)
+ n1: 2864 0x4A4356B: _nl_intern_locale_data (loadlocale.c:156)
+  n1: 2864 0x4A432F3: _nl_load_locale_from_archive (loadarchive.c:477)
+   n1: 2864 0x4A42598: _nl_find_locale (findlocale.c:152)
+    n1: 2864 0x4A45542: setlocale (setlocale.c:337)
+     n1: 2864 0x40A725D: set_default_locale (locale.c:88)
+      n0: 2864 0x401CA84: main (shell.c:419)
+ n1: 1200 0x40454EA: UnknownInlinedFun (xmalloc.c:104)
+  n1: 1200 0x40454EA: new_shell_variable (variables.c:2769)
+   n1: 1200 0x404A74D: make_new_variable.lto_priv.0 (variables.c:2784)
+    n1: 1200 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+     n1: 1200 0x404E92C: initialize_shell_variables (variables.c:513)
+      n1: 1200 0x4020A5A: shell_initialize (shell.c:1963)
+       n0: 1200 0x401D5B7: main (shell.c:580)
+ n0: 970 in 17 places, all below massif's threshold (1.00%)
+ n1: 792 0x4A4365D: _nl_intern_locale_data (loadlocale.c:156)
+  n1: 792 0x4A432F3: _nl_load_locale_from_archive (loadarchive.c:477)
+   n1: 792 0x4A42598: _nl_find_locale (findlocale.c:152)
+    n1: 792 0x4A45542: setlocale (setlocale.c:337)
+     n1: 792 0x40A725D: set_default_locale (locale.c:88)
+      n0: 792 0x401CA84: main (shell.c:419)
+ n1: 768 0x4083F3E: UnknownInlinedFun (xmalloc.c:104)
+  n1: 768 0x4083F3E: hash_insert (hashlib.c:337)
+   n1: 768 0x404A794: make_new_variable.lto_priv.0 (variables.c:2790)
+    n1: 768 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+     n1: 768 0x404E92C: initialize_shell_variables (variables.c:513)
+      n1: 768 0x4020A5A: shell_initialize (shell.c:1963)
+       n0: 768 0x401D5B7: main (shell.c:580)
+ n1: 739 0x404E96E: UnknownInlinedFun (xmalloc.c:104)
+  n1: 739 0x404E96E: initialize_shell_variables (variables.c:536)
+   n1: 739 0x4020A5A: shell_initialize (shell.c:1963)
+    n0: 739 0x401D5B7: main (shell.c:580)
+ n1: 393 0x4045508: UnknownInlinedFun (xmalloc.c:104)
+  n1: 393 0x4045508: new_shell_variable (variables.c:2771)
+   n1: 393 0x404A74D: make_new_variable.lto_priv.0 (variables.c:2784)
+    n1: 393 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+     n1: 393 0x404E92C: initialize_shell_variables (variables.c:513)
+      n1: 393 0x4020A5A: shell_initialize (shell.c:1963)
+       n0: 393 0x401D5B7: main (shell.c:580)
+ n1: 393 0x404A770: UnknownInlinedFun (xmalloc.c:104)
+  n1: 393 0x404A770: make_new_variable.lto_priv.0 (variables.c:2790)
+   n1: 393 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+    n1: 393 0x404E92C: initialize_shell_variables (variables.c:513)
+     n1: 393 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 393 0x401D5B7: main (shell.c:580)
+ n1: 363 0x404B1A8: UnknownInlinedFun (xmalloc.c:104)
+  n1: 363 0x404B1A8: make_variable_value (variables.c:2997)
+   n1: 363 0x404B844: bind_variable_internal.lto_priv.0 (variables.c:3120)
+    n1: 363 0x404E92C: initialize_shell_variables (variables.c:513)
+     n1: 363 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 363 0x401D5B7: main (shell.c:580)
+#-----------
+snapshot=12
+#-----------
+time=1624123
+mem_heap_B=26570
+mem_heap_extra_B=3214
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=1636532
+mem_heap_B=27795
+mem_heap_extra_B=3949
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=1645002
+mem_heap_B=28858
+mem_heap_extra_B=4462
+mem_stacks_B=0
+heap_tree=detailed
+n10: 28858 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 16384 0x4083976: UnknownInlinedFun (xmalloc.c:104)
+  n3: 16384 0x4083976: hash_create (hashlib.c:72)
+   n1: 8192 0x4047B95: create_variable_tables.lto_priv.0 (variables.c:352)
+    n1: 8192 0x404E0A5: initialize_shell_variables (variables.c:374)
+     n1: 8192 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 8192 0x401D5B7: main (shell.c:580)
+   n1: 4096 0x4047B39: create_variable_tables.lto_priv.0 (variables.c:360)
+    n1: 4096 0x404E0A5: initialize_shell_variables (variables.c:374)
+     n1: 4096 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 4096 0x401D5B7: main (shell.c:580)
+   n1: 4096 0x4047BB9: create_variable_tables.lto_priv.0 (variables.c:356)
+    n1: 4096 0x404E0A5: initialize_shell_variables (variables.c:374)
+     n1: 4096 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 4096 0x401D5B7: main (shell.c:580)
+ n1: 2864 0x4A4356B: _nl_intern_locale_data (loadlocale.c:156)
+  n1: 2864 0x4A432F3: _nl_load_locale_from_archive (loadarchive.c:477)
+   n1: 2864 0x4A42598: _nl_find_locale (findlocale.c:152)
+    n1: 2864 0x4A45542: setlocale (setlocale.c:337)
+     n1: 2864 0x40A725D: set_default_locale (locale.c:88)
+      n0: 2864 0x401CA84: main (shell.c:419)
+ n1: 2400 0x40454EA: UnknownInlinedFun (xmalloc.c:104)
+  n1: 2400 0x40454EA: new_shell_variable (variables.c:2769)
+   n1: 2400 0x404A74D: make_new_variable.lto_priv.0 (variables.c:2784)
+    n1: 2400 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+     n1: 2400 0x404E92C: initialize_shell_variables (variables.c:513)
+      n1: 2400 0x4020A5A: shell_initialize (shell.c:1963)
+       n0: 2400 0x401D5B7: main (shell.c:580)
+ n1: 1568 0x4083F3E: UnknownInlinedFun (xmalloc.c:104)
+  n1: 1568 0x4083F3E: hash_insert (hashlib.c:337)
+   n1: 1568 0x404A794: make_new_variable.lto_priv.0 (variables.c:2790)
+    n1: 1568 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+     n1: 1568 0x404E92C: initialize_shell_variables (variables.c:513)
+      n1: 1568 0x4020A5A: shell_initialize (shell.c:1963)
+       n0: 1568 0x401D5B7: main (shell.c:580)
+ n1: 1555 0x404E96E: UnknownInlinedFun (xmalloc.c:104)
+  n1: 1555 0x404E96E: initialize_shell_variables (variables.c:536)
+   n1: 1555 0x4020A5A: shell_initialize (shell.c:1963)
+    n0: 1555 0x401D5B7: main (shell.c:580)
+ n0: 970 in 17 places, all below massif's threshold (1.00%)
+ n1: 795 0x404B1A8: UnknownInlinedFun (xmalloc.c:104)
+  n1: 795 0x404B1A8: make_variable_value (variables.c:2997)
+   n1: 795 0x404B844: bind_variable_internal.lto_priv.0 (variables.c:3120)
+    n1: 795 0x404E92C: initialize_shell_variables (variables.c:513)
+     n1: 795 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 795 0x401D5B7: main (shell.c:580)
+ n1: 792 0x4A4365D: _nl_intern_locale_data (loadlocale.c:156)
+  n1: 792 0x4A432F3: _nl_load_locale_from_archive (loadarchive.c:477)
+   n1: 792 0x4A42598: _nl_find_locale (findlocale.c:152)
+    n1: 792 0x4A45542: setlocale (setlocale.c:337)
+     n1: 792 0x40A725D: set_default_locale (locale.c:88)
+      n0: 792 0x401CA84: main (shell.c:419)
+ n1: 765 0x4045508: UnknownInlinedFun (xmalloc.c:104)
+  n1: 765 0x4045508: new_shell_variable (variables.c:2771)
+   n1: 765 0x404A74D: make_new_variable.lto_priv.0 (variables.c:2784)
+    n1: 765 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+     n1: 765 0x404E92C: initialize_shell_variables (variables.c:513)
+      n1: 765 0x4020A5A: shell_initialize (shell.c:1963)
+       n0: 765 0x401D5B7: main (shell.c:580)
+ n1: 765 0x404A770: UnknownInlinedFun (xmalloc.c:104)
+  n1: 765 0x404A770: make_new_variable.lto_priv.0 (variables.c:2790)
+   n1: 765 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+    n1: 765 0x404E92C: initialize_shell_variables (variables.c:513)
+     n1: 765 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 765 0x401D5B7: main (shell.c:580)
+#-----------
+snapshot=15
+#-----------
+time=1655473
+mem_heap_B=29962
+mem_heap_extra_B=4966
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=1663111
+mem_heap_B=31394
+mem_heap_extra_B=5398
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=1674119
+mem_heap_B=32584
+mem_heap_extra_B=5984
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=1688279
+mem_heap_B=34063
+mem_heap_extra_B=6761
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=1697623
+mem_heap_B=35101
+mem_heap_extra_B=7331
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=1714375
+mem_heap_B=36560
+mem_heap_extra_B=8216
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=1725235
+mem_heap_B=37792
+mem_heap_extra_B=8744
+mem_stacks_B=0
+heap_tree=detailed
+n10: 37792 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 16384 0x4083976: UnknownInlinedFun (xmalloc.c:104)
+  n3: 16384 0x4083976: hash_create (hashlib.c:72)
+   n1: 8192 0x4047B95: create_variable_tables.lto_priv.0 (variables.c:352)
+    n1: 8192 0x404E0A5: initialize_shell_variables (variables.c:374)
+     n1: 8192 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 8192 0x401D5B7: main (shell.c:580)
+   n1: 4096 0x4047B39: create_variable_tables.lto_priv.0 (variables.c:360)
+    n1: 4096 0x404E0A5: initialize_shell_variables (variables.c:374)
+     n1: 4096 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 4096 0x401D5B7: main (shell.c:580)
+   n1: 4096 0x4047BB9: create_variable_tables.lto_priv.0 (variables.c:356)
+    n1: 4096 0x404E0A5: initialize_shell_variables (variables.c:374)
+     n1: 4096 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 4096 0x401D5B7: main (shell.c:580)
+ n1: 5232 0x40454EA: UnknownInlinedFun (xmalloc.c:104)
+  n1: 5232 0x40454EA: new_shell_variable (variables.c:2769)
+   n2: 5232 0x404A74D: make_new_variable.lto_priv.0 (variables.c:2784)
+    n2: 5184 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+     n1: 3792 0x404E92C: initialize_shell_variables (variables.c:513)
+      n1: 3792 0x4020A5A: shell_initialize (shell.c:1963)
+       n0: 3792 0x401D5B7: main (shell.c:580)
+     n0: 1392 in 29 places, all below massif's threshold (1.00%)
+    n0: 48 in 1 place, below massif's threshold (1.00%)
+ n1: 3488 0x4083F3E: UnknownInlinedFun (xmalloc.c:104)
+  n1: 3488 0x4083F3E: hash_insert (hashlib.c:337)
+   n2: 3488 0x404A794: make_new_variable.lto_priv.0 (variables.c:2790)
+    n2: 3456 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+     n1: 2528 0x404E92C: initialize_shell_variables (variables.c:513)
+      n1: 2528 0x4020A5A: shell_initialize (shell.c:1963)
+       n0: 2528 0x401D5B7: main (shell.c:580)
+     n0: 928 in 29 places, all below massif's threshold (1.00%)
+    n0: 32 in 1 place, below massif's threshold (1.00%)
+ n1: 2899 0x404E96E: UnknownInlinedFun (xmalloc.c:104)
+  n1: 2899 0x404E96E: initialize_shell_variables (variables.c:536)
+   n1: 2899 0x4020A5A: shell_initialize (shell.c:1963)
+    n0: 2899 0x401D5B7: main (shell.c:580)
+ n1: 2864 0x4A4356B: _nl_intern_locale_data (loadlocale.c:156)
+  n1: 2864 0x4A432F3: _nl_load_locale_from_archive (loadarchive.c:477)
+   n1: 2864 0x4A42598: _nl_find_locale (findlocale.c:152)
+    n1: 2864 0x4A45542: setlocale (setlocale.c:337)
+     n1: 2864 0x40A725D: set_default_locale (locale.c:88)
+      n0: 2864 0x401CA84: main (shell.c:419)
+ n1: 1930 0x404B1A8: UnknownInlinedFun (xmalloc.c:104)
+  n2: 1930 0x404B1A8: make_variable_value (variables.c:2997)
+   n2: 1928 0x404B844: bind_variable_internal.lto_priv.0 (variables.c:3120)
+    n1: 1725 0x404E92C: initialize_shell_variables (variables.c:513)
+     n1: 1725 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 1725 0x401D5B7: main (shell.c:580)
+    n0: 203 in 15 places, all below massif's threshold (1.00%)
+   n0: 2 in 1 place, below massif's threshold (1.00%)
+ n1: 1455 0x4045508: UnknownInlinedFun (xmalloc.c:104)
+  n1: 1455 0x4045508: new_shell_variable (variables.c:2771)
+   n2: 1455 0x404A74D: make_new_variable.lto_priv.0 (variables.c:2784)
+    n2: 1441 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+     n1: 1180 0x404E92C: initialize_shell_variables (variables.c:513)
+      n1: 1180 0x4020A5A: shell_initialize (shell.c:1963)
+       n0: 1180 0x401D5B7: main (shell.c:580)
+     n0: 261 in 29 places, all below massif's threshold (1.00%)
+    n0: 14 in 1 place, below massif's threshold (1.00%)
+ n1: 1455 0x404A770: UnknownInlinedFun (xmalloc.c:104)
+  n2: 1455 0x404A770: make_new_variable.lto_priv.0 (variables.c:2790)
+   n2: 1441 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+    n1: 1180 0x404E92C: initialize_shell_variables (variables.c:513)
+     n1: 1180 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 1180 0x401D5B7: main (shell.c:580)
+    n0: 261 in 29 places, all below massif's threshold (1.00%)
+   n0: 14 in 1 place, below massif's threshold (1.00%)
+ n0: 1293 in 24 places, all below massif's threshold (1.00%)
+ n1: 792 0x4A4365D: _nl_intern_locale_data (loadlocale.c:156)
+  n1: 792 0x4A432F3: _nl_load_locale_from_archive (loadarchive.c:477)
+   n1: 792 0x4A42598: _nl_find_locale (findlocale.c:152)
+    n1: 792 0x4A45542: setlocale (setlocale.c:337)
+     n1: 792 0x40A725D: set_default_locale (locale.c:88)
+      n0: 792 0x401CA84: main (shell.c:419)
+#-----------
+snapshot=22
+#-----------
+time=1740276
+mem_heap_B=47132
+mem_heap_extra_B=9172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=1757907
+mem_heap_B=55926
+mem_heap_extra_B=9370
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=1801063
+mem_heap_B=57936
+mem_heap_extra_B=9464
+mem_stacks_B=0
+heap_tree=detailed
+n12: 57936 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 32768 0x4083976: UnknownInlinedFun (xmalloc.c:104)
+  n5: 32768 0x4083976: hash_create (hashlib.c:72)
+   n1: 8192 0x4047B95: create_variable_tables.lto_priv.0 (variables.c:352)
+    n1: 8192 0x404E0A5: initialize_shell_variables (variables.c:374)
+     n1: 8192 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 8192 0x401D5B7: main (shell.c:580)
+   n1: 8192 0x404ECB1: UnknownInlinedFun (variables.c:2857)
+    n1: 8192 0x404ECB1: UnknownInlinedFun (variables.c:1276)
+     n1: 8192 0x404ECB1: UnknownInlinedFun (variables.c:1269)
+      n1: 8192 0x404ECB1: UnknownInlinedFun (variables.c:1897)
+       n1: 8192 0x404ECB1: initialize_shell_variables (variables.c:709)
+        n1: 8192 0x4020A5A: shell_initialize (shell.c:1963)
+         n0: 8192 0x401D5B7: main (shell.c:580)
+   n1: 8192 0x404ED01: UnknownInlinedFun (variables.c:2857)
+    n1: 8192 0x404ED01: UnknownInlinedFun (variables.c:1276)
+     n1: 8192 0x404ED01: UnknownInlinedFun (variables.c:1269)
+      n1: 8192 0x404ED01: UnknownInlinedFun (variables.c:1895)
+       n1: 8192 0x404ED01: initialize_shell_variables (variables.c:709)
+        n1: 8192 0x4020A5A: shell_initialize (shell.c:1963)
+         n0: 8192 0x401D5B7: main (shell.c:580)
+   n1: 4096 0x4047B39: create_variable_tables.lto_priv.0 (variables.c:360)
+    n1: 4096 0x404E0A5: initialize_shell_variables (variables.c:374)
+     n1: 4096 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 4096 0x401D5B7: main (shell.c:580)
+   n1: 4096 0x4047BB9: create_variable_tables.lto_priv.0 (variables.c:356)
+    n1: 4096 0x404E0A5: initialize_shell_variables (variables.c:374)
+     n1: 4096 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 4096 0x401D5B7: main (shell.c:580)
+ n1: 5760 0x40454EA: UnknownInlinedFun (xmalloc.c:104)
+  n1: 5760 0x40454EA: new_shell_variable (variables.c:2769)
+   n2: 5760 0x404A74D: make_new_variable.lto_priv.0 (variables.c:2784)
+    n2: 5280 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+     n1: 3792 0x404E92C: initialize_shell_variables (variables.c:513)
+      n1: 3792 0x4020A5A: shell_initialize (shell.c:1963)
+       n0: 3792 0x401D5B7: main (shell.c:580)
+     n0: 1488 in 31 places, all below massif's threshold (1.00%)
+    n0: 480 in 3 places, all below massif's threshold (1.00%)
+ n1: 3840 0x4083F3E: UnknownInlinedFun (xmalloc.c:104)
+  n1: 3840 0x4083F3E: hash_insert (hashlib.c:337)
+   n2: 3840 0x404A794: make_new_variable.lto_priv.0 (variables.c:2790)
+    n2: 3520 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+     n1: 2528 0x404E92C: initialize_shell_variables (variables.c:513)
+      n1: 2528 0x4020A5A: shell_initialize (shell.c:1963)
+       n0: 2528 0x401D5B7: main (shell.c:580)
+     n0: 992 in 31 places, all below massif's threshold (1.00%)
+    n0: 320 in 3 places, all below massif's threshold (1.00%)
+ n1: 2899 0x404E96E: UnknownInlinedFun (xmalloc.c:104)
+  n1: 2899 0x404E96E: initialize_shell_variables (variables.c:536)
+   n1: 2899 0x4020A5A: shell_initialize (shell.c:1963)
+    n0: 2899 0x401D5B7: main (shell.c:580)
+ n1: 2864 0x4A4356B: _nl_intern_locale_data (loadlocale.c:156)
+  n1: 2864 0x4A432F3: _nl_load_locale_from_archive (loadarchive.c:477)
+   n1: 2864 0x4A42598: _nl_find_locale (findlocale.c:152)
+    n1: 2864 0x4A45542: setlocale (setlocale.c:337)
+     n1: 2864 0x40A725D: set_default_locale (locale.c:88)
+      n0: 2864 0x401CA84: main (shell.c:419)
+ n1: 2147 0x404B1A8: UnknownInlinedFun (xmalloc.c:104)
+  n2: 2147 0x404B1A8: make_variable_value (variables.c:2997)
+   n2: 2145 0x404B844: bind_variable_internal.lto_priv.0 (variables.c:3120)
+    n1: 1725 0x404E92C: initialize_shell_variables (variables.c:513)
+     n1: 1725 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 1725 0x401D5B7: main (shell.c:580)
+    n0: 420 in 17 places, all below massif's threshold (1.00%)
+   n0: 2 in 1 place, below massif's threshold (1.00%)
+ n0: 1798 in 28 places, all below massif's threshold (1.00%)
+ n1: 1566 0x4045508: UnknownInlinedFun (xmalloc.c:104)
+  n1: 1566 0x4045508: new_shell_variable (variables.c:2771)
+   n2: 1566 0x404A74D: make_new_variable.lto_priv.0 (variables.c:2784)
+    n2: 1460 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+     n1: 1180 0x404E92C: initialize_shell_variables (variables.c:513)
+      n1: 1180 0x4020A5A: shell_initialize (shell.c:1963)
+       n0: 1180 0x401D5B7: main (shell.c:580)
+     n0: 280 in 31 places, all below massif's threshold (1.00%)
+    n0: 106 in 3 places, all below massif's threshold (1.00%)
+ n1: 1566 0x404A770: UnknownInlinedFun (xmalloc.c:104)
+  n2: 1566 0x404A770: make_new_variable.lto_priv.0 (variables.c:2790)
+   n2: 1460 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+    n1: 1180 0x404E92C: initialize_shell_variables (variables.c:513)
+     n1: 1180 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 1180 0x401D5B7: main (shell.c:580)
+    n0: 280 in 31 places, all below massif's threshold (1.00%)
+   n0: 106 in 3 places, all below massif's threshold (1.00%)
+ n1: 968 0x4045F21: UnknownInlinedFun (xmalloc.c:104)
+  n1: 968 0x4045F21: UnknownInlinedFun (variables.c:4135)
+   n1: 968 0x4045F21: map_over (variables.c:4191)
+    n1: 968 0x4057235: UnknownInlinedFun (variables.c:4929)
+     n1: 968 0x4057235: maybe_make_export_env.part.0 (variables.c:5112)
+      n1: 968 0x40A632A: UnknownInlinedFun (variables.c:5071)
+       n1: 968 0x40A632A: reset_locale_vars (locale.c:375)
+        n1: 968 0x40A7AB2: set_locale_var (locale.c:222)
+         n1: 968 0x40A7DEF: set_default_lang (locale.c:335)
+          n0: 968 0x401D5BC: main (shell.c:582)
+ n1: 968 0x4057308: UnknownInlinedFun (xmalloc.c:123)
+  n1: 968 0x4057308: UnknownInlinedFun (xmalloc.c:144)
+   n1: 968 0x4057308: UnknownInlinedFun (stringvec.c:53)
+    n1: 968 0x4057308: maybe_make_export_env.part.0 (variables.c:5085)
+     n1: 968 0x40A632A: UnknownInlinedFun (variables.c:5071)
+      n1: 968 0x40A632A: reset_locale_vars (locale.c:375)
+       n1: 968 0x40A7AB2: set_locale_var (locale.c:222)
+        n1: 968 0x40A7DEF: set_default_lang (locale.c:335)
+         n0: 968 0x401D5BC: main (shell.c:582)
+ n1: 792 0x4A4365D: _nl_intern_locale_data (loadlocale.c:156)
+  n1: 792 0x4A432F3: _nl_load_locale_from_archive (loadarchive.c:477)
+   n1: 792 0x4A42598: _nl_find_locale (findlocale.c:152)
+    n1: 792 0x4A45542: setlocale (setlocale.c:337)
+     n1: 792 0x40A725D: set_default_locale (locale.c:88)
+      n0: 792 0x401CA84: main (shell.c:419)
+#-----------
+snapshot=25
+#-----------
+time=1812644
+mem_heap_B=61467
+mem_heap_extra_B=10733
+mem_stacks_B=0
+heap_tree=detailed
+n13: 61467 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 32768 0x4083976: UnknownInlinedFun (xmalloc.c:104)
+  n5: 32768 0x4083976: hash_create (hashlib.c:72)
+   n1: 8192 0x4047B95: create_variable_tables.lto_priv.0 (variables.c:352)
+    n1: 8192 0x404E0A5: initialize_shell_variables (variables.c:374)
+     n1: 8192 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 8192 0x401D5B7: main (shell.c:580)
+   n1: 8192 0x404ECB1: UnknownInlinedFun (variables.c:2857)
+    n1: 8192 0x404ECB1: UnknownInlinedFun (variables.c:1276)
+     n1: 8192 0x404ECB1: UnknownInlinedFun (variables.c:1269)
+      n1: 8192 0x404ECB1: UnknownInlinedFun (variables.c:1897)
+       n1: 8192 0x404ECB1: initialize_shell_variables (variables.c:709)
+        n1: 8192 0x4020A5A: shell_initialize (shell.c:1963)
+         n0: 8192 0x401D5B7: main (shell.c:580)
+   n1: 8192 0x404ED01: UnknownInlinedFun (variables.c:2857)
+    n1: 8192 0x404ED01: UnknownInlinedFun (variables.c:1276)
+     n1: 8192 0x404ED01: UnknownInlinedFun (variables.c:1269)
+      n1: 8192 0x404ED01: UnknownInlinedFun (variables.c:1895)
+       n1: 8192 0x404ED01: initialize_shell_variables (variables.c:709)
+        n1: 8192 0x4020A5A: shell_initialize (shell.c:1963)
+         n0: 8192 0x401D5B7: main (shell.c:580)
+   n1: 4096 0x4047B39: create_variable_tables.lto_priv.0 (variables.c:360)
+    n1: 4096 0x404E0A5: initialize_shell_variables (variables.c:374)
+     n1: 4096 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 4096 0x401D5B7: main (shell.c:580)
+   n1: 4096 0x4047BB9: create_variable_tables.lto_priv.0 (variables.c:356)
+    n1: 4096 0x404E0A5: initialize_shell_variables (variables.c:374)
+     n1: 4096 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 4096 0x401D5B7: main (shell.c:580)
+ n1: 5760 0x40454EA: UnknownInlinedFun (xmalloc.c:104)
+  n1: 5760 0x40454EA: new_shell_variable (variables.c:2769)
+   n2: 5760 0x404A74D: make_new_variable.lto_priv.0 (variables.c:2784)
+    n2: 5280 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+     n1: 3792 0x404E92C: initialize_shell_variables (variables.c:513)
+      n1: 3792 0x4020A5A: shell_initialize (shell.c:1963)
+       n0: 3792 0x401D5B7: main (shell.c:580)
+     n0: 1488 in 31 places, all below massif's threshold (1.00%)
+    n0: 480 in 3 places, all below massif's threshold (1.00%)
+ n1: 3840 0x4083F3E: UnknownInlinedFun (xmalloc.c:104)
+  n1: 3840 0x4083F3E: hash_insert (hashlib.c:337)
+   n2: 3840 0x404A794: make_new_variable.lto_priv.0 (variables.c:2790)
+    n2: 3520 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+     n1: 2528 0x404E92C: initialize_shell_variables (variables.c:513)
+      n1: 2528 0x4020A5A: shell_initialize (shell.c:1963)
+       n0: 2528 0x401D5B7: main (shell.c:580)
+     n0: 992 in 31 places, all below massif's threshold (1.00%)
+    n0: 320 in 3 places, all below massif's threshold (1.00%)
+ n1: 2899 0x404E96E: UnknownInlinedFun (xmalloc.c:104)
+  n1: 2899 0x404E96E: initialize_shell_variables (variables.c:536)
+   n1: 2899 0x4020A5A: shell_initialize (shell.c:1963)
+    n0: 2899 0x401D5B7: main (shell.c:580)
+ n1: 2899 0x4050245: UnknownInlinedFun (xmalloc.c:104)
+  n1: 2899 0x4050245: make_env_array_from_var_list.lto_priv.0 (variables.c:4897)
+   n1: 2899 0x4057245: UnknownInlinedFun (variables.c:4935)
+    n1: 2899 0x4057245: maybe_make_export_env.part.0 (variables.c:5112)
+     n1: 2899 0x40A632A: UnknownInlinedFun (variables.c:5071)
+      n1: 2899 0x40A632A: reset_locale_vars (locale.c:375)
+       n1: 2899 0x40A7AB2: set_locale_var (locale.c:222)
+        n1: 2899 0x40A7DEF: set_default_lang (locale.c:335)
+         n0: 2899 0x401D5BC: main (shell.c:582)
+ n1: 2864 0x4A4356B: _nl_intern_locale_data (loadlocale.c:156)
+  n1: 2864 0x4A432F3: _nl_load_locale_from_archive (loadarchive.c:477)
+   n1: 2864 0x4A42598: _nl_find_locale (findlocale.c:152)
+    n1: 2864 0x4A45542: setlocale (setlocale.c:337)
+     n1: 2864 0x40A725D: set_default_locale (locale.c:88)
+      n0: 2864 0x401CA84: main (shell.c:419)
+ n0: 2430 in 31 places, all below massif's threshold (1.00%)
+ n1: 2147 0x404B1A8: UnknownInlinedFun (xmalloc.c:104)
+  n2: 2147 0x404B1A8: make_variable_value (variables.c:2997)
+   n2: 2145 0x404B844: bind_variable_internal.lto_priv.0 (variables.c:3120)
+    n1: 1725 0x404E92C: initialize_shell_variables (variables.c:513)
+     n1: 1725 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 1725 0x401D5B7: main (shell.c:580)
+    n0: 420 in 17 places, all below massif's threshold (1.00%)
+   n0: 2 in 1 place, below massif's threshold (1.00%)
+ n1: 1566 0x4045508: UnknownInlinedFun (xmalloc.c:104)
+  n1: 1566 0x4045508: new_shell_variable (variables.c:2771)
+   n2: 1566 0x404A74D: make_new_variable.lto_priv.0 (variables.c:2784)
+    n2: 1460 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+     n1: 1180 0x404E92C: initialize_shell_variables (variables.c:513)
+      n1: 1180 0x4020A5A: shell_initialize (shell.c:1963)
+       n0: 1180 0x401D5B7: main (shell.c:580)
+     n0: 280 in 31 places, all below massif's threshold (1.00%)
+    n0: 106 in 3 places, all below massif's threshold (1.00%)
+ n1: 1566 0x404A770: UnknownInlinedFun (xmalloc.c:104)
+  n2: 1566 0x404A770: make_new_variable.lto_priv.0 (variables.c:2790)
+   n2: 1460 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+    n1: 1180 0x404E92C: initialize_shell_variables (variables.c:513)
+     n1: 1180 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 1180 0x401D5B7: main (shell.c:580)
+    n0: 280 in 31 places, all below massif's threshold (1.00%)
+   n0: 106 in 3 places, all below massif's threshold (1.00%)
+ n1: 968 0x4045F21: UnknownInlinedFun (xmalloc.c:104)
+  n1: 968 0x4045F21: UnknownInlinedFun (variables.c:4135)
+   n1: 968 0x4045F21: map_over (variables.c:4191)
+    n1: 968 0x4057235: UnknownInlinedFun (variables.c:4929)
+     n1: 968 0x4057235: maybe_make_export_env.part.0 (variables.c:5112)
+      n1: 968 0x40A632A: UnknownInlinedFun (variables.c:5071)
+       n1: 968 0x40A632A: reset_locale_vars (locale.c:375)
+        n1: 968 0x40A7AB2: set_locale_var (locale.c:222)
+         n1: 968 0x40A7DEF: set_default_lang (locale.c:335)
+          n0: 968 0x401D5BC: main (shell.c:582)
+ n1: 968 0x4057308: UnknownInlinedFun (xmalloc.c:123)
+  n1: 968 0x4057308: UnknownInlinedFun (xmalloc.c:144)
+   n1: 968 0x4057308: UnknownInlinedFun (stringvec.c:53)
+    n1: 968 0x4057308: maybe_make_export_env.part.0 (variables.c:5085)
+     n1: 968 0x40A632A: UnknownInlinedFun (variables.c:5071)
+      n1: 968 0x40A632A: reset_locale_vars (locale.c:375)
+       n1: 968 0x40A7AB2: set_locale_var (locale.c:222)
+        n1: 968 0x40A7DEF: set_default_lang (locale.c:335)
+         n0: 968 0x401D5BC: main (shell.c:582)
+ n1: 792 0x4A4365D: _nl_intern_locale_data (loadlocale.c:156)
+  n1: 792 0x4A432F3: _nl_load_locale_from_archive (loadarchive.c:477)
+   n1: 792 0x4A42598: _nl_find_locale (findlocale.c:152)
+    n1: 792 0x4A45542: setlocale (setlocale.c:337)
+     n1: 792 0x40A725D: set_default_locale (locale.c:88)
+      n0: 792 0x401CA84: main (shell.c:419)
+#-----------
+snapshot=26
+#-----------
+time=1846232
+mem_heap_B=59871
+mem_heap_extra_B=10721
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=1860301
+mem_heap_B=59871
+mem_heap_extra_B=10721
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=1870085
+mem_heap_B=59871
+mem_heap_extra_B=10721
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=1943838
+mem_heap_B=59871
+mem_heap_extra_B=10721
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=1985519
+mem_heap_B=59891
+mem_heap_extra_B=10741
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=1995613
+mem_heap_B=66071
+mem_heap_extra_B=10785
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=2015845
+mem_heap_B=68119
+mem_heap_extra_B=10793
+mem_stacks_B=0
+heap_tree=detailed
+n15: 68119 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 32768 0x4083976: UnknownInlinedFun (xmalloc.c:104)
+  n5: 32768 0x4083976: hash_create (hashlib.c:72)
+   n1: 8192 0x4047B95: create_variable_tables.lto_priv.0 (variables.c:352)
+    n1: 8192 0x404E0A5: initialize_shell_variables (variables.c:374)
+     n1: 8192 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 8192 0x401D5B7: main (shell.c:580)
+   n1: 8192 0x404ECB1: UnknownInlinedFun (variables.c:2857)
+    n1: 8192 0x404ECB1: UnknownInlinedFun (variables.c:1276)
+     n1: 8192 0x404ECB1: UnknownInlinedFun (variables.c:1269)
+      n1: 8192 0x404ECB1: UnknownInlinedFun (variables.c:1897)
+       n1: 8192 0x404ECB1: initialize_shell_variables (variables.c:709)
+        n1: 8192 0x4020A5A: shell_initialize (shell.c:1963)
+         n0: 8192 0x401D5B7: main (shell.c:580)
+   n1: 8192 0x404ED01: UnknownInlinedFun (variables.c:2857)
+    n1: 8192 0x404ED01: UnknownInlinedFun (variables.c:1276)
+     n1: 8192 0x404ED01: UnknownInlinedFun (variables.c:1269)
+      n1: 8192 0x404ED01: UnknownInlinedFun (variables.c:1895)
+       n1: 8192 0x404ED01: initialize_shell_variables (variables.c:709)
+        n1: 8192 0x4020A5A: shell_initialize (shell.c:1963)
+         n0: 8192 0x401D5B7: main (shell.c:580)
+   n1: 4096 0x4047B39: create_variable_tables.lto_priv.0 (variables.c:360)
+    n1: 4096 0x404E0A5: initialize_shell_variables (variables.c:374)
+     n1: 4096 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 4096 0x401D5B7: main (shell.c:580)
+   n1: 4096 0x4047BB9: create_variable_tables.lto_priv.0 (variables.c:356)
+    n1: 4096 0x404E0A5: initialize_shell_variables (variables.c:374)
+     n1: 4096 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 4096 0x401D5B7: main (shell.c:580)
+ n1: 5760 0x40454EA: UnknownInlinedFun (xmalloc.c:104)
+  n1: 5760 0x40454EA: new_shell_variable (variables.c:2769)
+   n2: 5760 0x404A74D: make_new_variable.lto_priv.0 (variables.c:2784)
+    n2: 5280 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+     n1: 3792 0x404E92C: initialize_shell_variables (variables.c:513)
+      n1: 3792 0x4020A5A: shell_initialize (shell.c:1963)
+       n0: 3792 0x401D5B7: main (shell.c:580)
+     n0: 1488 in 31 places, all below massif's threshold (1.00%)
+    n0: 480 in 3 places, all below massif's threshold (1.00%)
+ n1: 4096 0x4A8FF7C: _IO_file_doallocate (filedoalloc.c:91)
+  n1: 4096 0x4AA0225: _IO_doallocbuf (genops.c:373)
+   n1: 4096 0x4AA0225: _IO_doallocbuf (genops.c:368)
+    n1: 4096 0x4A9DCEE: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:520)
+     n1: 4096 0x4AA0312: _IO_default_uflow (genops.c:388)
+      n1: 4096 0x4A91DFA: _IO_getline_info (iogetline.c:60)
+       n1: 4096 0x4A9C871: fgets_unlocked (iofgets_u.c:52)
+        n1: 4096 0x4A4A083: read_alias_file (localealias.c:254)
+         n1: 4096 0x4A4A637: _nl_expand_alias (localealias.c:194)
+          n1: 4096 0x4A48538: _nl_find_domain (finddomain.c:123)
+           n1: 4096 0x4A47D95: __dcigettext (dcigettext.c:674)
+            n1: 4096 0x40A76A3: UnknownInlinedFun (execute_cmd.c:5762)
+             n1: 4096 0x40A76A3: UnknownInlinedFun (execute_cmd.c:5759)
+              n1: 4096 0x40A76A3: set_default_locale_vars (locale.c:179)
+               n0: 4096 0x401D5C1: main (shell.c:583)
+ n1: 3840 0x4083F3E: UnknownInlinedFun (xmalloc.c:104)
+  n1: 3840 0x4083F3E: hash_insert (hashlib.c:337)
+   n2: 3840 0x404A794: make_new_variable.lto_priv.0 (variables.c:2790)
+    n2: 3520 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+     n1: 2528 0x404E92C: initialize_shell_variables (variables.c:513)
+      n1: 2528 0x4020A5A: shell_initialize (shell.c:1963)
+       n0: 2528 0x401D5B7: main (shell.c:580)
+     n0: 992 in 31 places, all below massif's threshold (1.00%)
+    n0: 320 in 3 places, all below massif's threshold (1.00%)
+ n1: 2899 0x404E96E: UnknownInlinedFun (xmalloc.c:104)
+  n1: 2899 0x404E96E: initialize_shell_variables (variables.c:536)
+   n1: 2899 0x4020A5A: shell_initialize (shell.c:1963)
+    n0: 2899 0x401D5B7: main (shell.c:580)
+ n1: 2899 0x4050245: UnknownInlinedFun (xmalloc.c:104)
+  n1: 2899 0x4050245: make_env_array_from_var_list.lto_priv.0 (variables.c:4897)
+   n1: 2899 0x4057245: UnknownInlinedFun (variables.c:4935)
+    n1: 2899 0x4057245: maybe_make_export_env.part.0 (variables.c:5112)
+     n1: 2899 0x40A632A: UnknownInlinedFun (variables.c:5071)
+      n1: 2899 0x40A632A: reset_locale_vars (locale.c:375)
+       n1: 2899 0x40A7AB2: set_locale_var (locale.c:222)
+        n1: 2899 0x40A7DEF: set_default_lang (locale.c:335)
+         n0: 2899 0x401D5BC: main (shell.c:582)
+ n1: 2864 0x4A4356B: _nl_intern_locale_data (loadlocale.c:156)
+  n1: 2864 0x4A432F3: _nl_load_locale_from_archive (loadarchive.c:477)
+   n1: 2864 0x4A42598: _nl_find_locale (findlocale.c:152)
+    n1: 2864 0x4A45542: setlocale (setlocale.c:337)
+     n1: 2864 0x40A725D: set_default_locale (locale.c:88)
+      n0: 2864 0x401CA84: main (shell.c:419)
+ n0: 2306 in 37 places, all below massif's threshold (1.00%)
+ n1: 2147 0x404B1A8: UnknownInlinedFun (xmalloc.c:104)
+  n2: 2147 0x404B1A8: make_variable_value (variables.c:2997)
+   n2: 2145 0x404B844: bind_variable_internal.lto_priv.0 (variables.c:3120)
+    n1: 1725 0x404E92C: initialize_shell_variables (variables.c:513)
+     n1: 1725 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 1725 0x401D5B7: main (shell.c:580)
+    n0: 420 in 17 places, all below massif's threshold (1.00%)
+   n0: 2 in 1 place, below massif's threshold (1.00%)
+ n1: 2048 0x4A4A3BA: read_alias_file (localealias.c:329)
+  n1: 2048 0x4A4A637: _nl_expand_alias (localealias.c:194)
+   n1: 2048 0x4A48538: _nl_find_domain (finddomain.c:123)
+    n1: 2048 0x4A47D95: __dcigettext (dcigettext.c:674)
+     n1: 2048 0x40A76A3: UnknownInlinedFun (execute_cmd.c:5762)
+      n1: 2048 0x40A76A3: UnknownInlinedFun (execute_cmd.c:5759)
+       n1: 2048 0x40A76A3: set_default_locale_vars (locale.c:179)
+        n0: 2048 0x401D5C1: main (shell.c:583)
+ n1: 1600 0x4A4A437: extend_alias_table (localealias.c:397)
+  n1: 1600 0x4A4A437: read_alias_file (localealias.c:309)
+   n1: 1600 0x4A4A637: _nl_expand_alias (localealias.c:194)
+    n1: 1600 0x4A48538: _nl_find_domain (finddomain.c:123)
+     n1: 1600 0x4A47D95: __dcigettext (dcigettext.c:674)
+      n1: 1600 0x40A76A3: UnknownInlinedFun (execute_cmd.c:5762)
+       n1: 1600 0x40A76A3: UnknownInlinedFun (execute_cmd.c:5759)
+        n1: 1600 0x40A76A3: set_default_locale_vars (locale.c:179)
+         n0: 1600 0x401D5C1: main (shell.c:583)
+ n1: 1566 0x4045508: UnknownInlinedFun (xmalloc.c:104)
+  n1: 1566 0x4045508: new_shell_variable (variables.c:2771)
+   n2: 1566 0x404A74D: make_new_variable.lto_priv.0 (variables.c:2784)
+    n2: 1460 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+     n1: 1180 0x404E92C: initialize_shell_variables (variables.c:513)
+      n1: 1180 0x4020A5A: shell_initialize (shell.c:1963)
+       n0: 1180 0x401D5B7: main (shell.c:580)
+     n0: 280 in 31 places, all below massif's threshold (1.00%)
+    n0: 106 in 3 places, all below massif's threshold (1.00%)
+ n1: 1566 0x404A770: UnknownInlinedFun (xmalloc.c:104)
+  n2: 1566 0x404A770: make_new_variable.lto_priv.0 (variables.c:2790)
+   n2: 1460 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+    n1: 1180 0x404E92C: initialize_shell_variables (variables.c:513)
+     n1: 1180 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 1180 0x401D5B7: main (shell.c:580)
+    n0: 280 in 31 places, all below massif's threshold (1.00%)
+   n0: 106 in 3 places, all below massif's threshold (1.00%)
+ n1: 968 0x4057308: UnknownInlinedFun (xmalloc.c:123)
+  n1: 968 0x4057308: UnknownInlinedFun (xmalloc.c:144)
+   n1: 968 0x4057308: UnknownInlinedFun (stringvec.c:53)
+    n1: 968 0x4057308: maybe_make_export_env.part.0 (variables.c:5085)
+     n1: 968 0x40A632A: UnknownInlinedFun (variables.c:5071)
+      n1: 968 0x40A632A: reset_locale_vars (locale.c:375)
+       n1: 968 0x40A7AB2: set_locale_var (locale.c:222)
+        n1: 968 0x40A7DEF: set_default_lang (locale.c:335)
+         n0: 968 0x401D5BC: main (shell.c:582)
+ n1: 792 0x4A4365D: _nl_intern_locale_data (loadlocale.c:156)
+  n1: 792 0x4A432F3: _nl_load_locale_from_archive (loadarchive.c:477)
+   n1: 792 0x4A42598: _nl_find_locale (findlocale.c:152)
+    n1: 792 0x4A45542: setlocale (setlocale.c:337)
+     n1: 792 0x40A725D: set_default_locale (locale.c:88)
+      n0: 792 0x401CA84: main (shell.c:419)
+#-----------
+snapshot=33
+#-----------
+time=2031395
+mem_heap_B=63556
+mem_heap_extra_B=10788
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=2041118
+mem_heap_B=64476
+mem_heap_extra_B=11036
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=2052579
+mem_heap_B=70286
+mem_heap_extra_B=11162
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=2067938
+mem_heap_B=71342
+mem_heap_extra_B=11370
+mem_stacks_B=0
+heap_tree=detailed
+n17: 71342 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 32768 0x4083976: UnknownInlinedFun (xmalloc.c:104)
+  n5: 32768 0x4083976: hash_create (hashlib.c:72)
+   n1: 8192 0x4047B95: create_variable_tables.lto_priv.0 (variables.c:352)
+    n1: 8192 0x404E0A5: initialize_shell_variables (variables.c:374)
+     n1: 8192 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 8192 0x401D5B7: main (shell.c:580)
+   n1: 8192 0x404ECB1: UnknownInlinedFun (variables.c:2857)
+    n1: 8192 0x404ECB1: UnknownInlinedFun (variables.c:1276)
+     n1: 8192 0x404ECB1: UnknownInlinedFun (variables.c:1269)
+      n1: 8192 0x404ECB1: UnknownInlinedFun (variables.c:1897)
+       n1: 8192 0x404ECB1: initialize_shell_variables (variables.c:709)
+        n1: 8192 0x4020A5A: shell_initialize (shell.c:1963)
+         n0: 8192 0x401D5B7: main (shell.c:580)
+   n1: 8192 0x404ED01: UnknownInlinedFun (variables.c:2857)
+    n1: 8192 0x404ED01: UnknownInlinedFun (variables.c:1276)
+     n1: 8192 0x404ED01: UnknownInlinedFun (variables.c:1269)
+      n1: 8192 0x404ED01: UnknownInlinedFun (variables.c:1895)
+       n1: 8192 0x404ED01: initialize_shell_variables (variables.c:709)
+        n1: 8192 0x4020A5A: shell_initialize (shell.c:1963)
+         n0: 8192 0x401D5B7: main (shell.c:580)
+   n1: 4096 0x4047B39: create_variable_tables.lto_priv.0 (variables.c:360)
+    n1: 4096 0x404E0A5: initialize_shell_variables (variables.c:374)
+     n1: 4096 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 4096 0x401D5B7: main (shell.c:580)
+   n1: 4096 0x4047BB9: create_variable_tables.lto_priv.0 (variables.c:356)
+    n1: 4096 0x404E0A5: initialize_shell_variables (variables.c:374)
+     n1: 4096 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 4096 0x401D5B7: main (shell.c:580)
+ n1: 5760 0x40454EA: UnknownInlinedFun (xmalloc.c:104)
+  n1: 5760 0x40454EA: new_shell_variable (variables.c:2769)
+   n2: 5760 0x404A74D: make_new_variable.lto_priv.0 (variables.c:2784)
+    n2: 5280 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+     n1: 3792 0x404E92C: initialize_shell_variables (variables.c:513)
+      n1: 3792 0x4020A5A: shell_initialize (shell.c:1963)
+       n0: 3792 0x401D5B7: main (shell.c:580)
+     n0: 1488 in 31 places, all below massif's threshold (1.00%)
+    n0: 480 in 3 places, all below massif's threshold (1.00%)
+ n0: 5145 in 56 places, all below massif's threshold (1.00%)
+ n1: 3840 0x4083F3E: UnknownInlinedFun (xmalloc.c:104)
+  n1: 3840 0x4083F3E: hash_insert (hashlib.c:337)
+   n2: 3840 0x404A794: make_new_variable.lto_priv.0 (variables.c:2790)
+    n2: 3520 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+     n1: 2528 0x404E92C: initialize_shell_variables (variables.c:513)
+      n1: 2528 0x4020A5A: shell_initialize (shell.c:1963)
+       n0: 2528 0x401D5B7: main (shell.c:580)
+     n0: 992 in 31 places, all below massif's threshold (1.00%)
+    n0: 320 in 3 places, all below massif's threshold (1.00%)
+ n1: 2899 0x404E96E: UnknownInlinedFun (xmalloc.c:104)
+  n1: 2899 0x404E96E: initialize_shell_variables (variables.c:536)
+   n1: 2899 0x4020A5A: shell_initialize (shell.c:1963)
+    n0: 2899 0x401D5B7: main (shell.c:580)
+ n1: 2899 0x4050245: UnknownInlinedFun (xmalloc.c:104)
+  n1: 2899 0x4050245: make_env_array_from_var_list.lto_priv.0 (variables.c:4897)
+   n1: 2899 0x4057245: UnknownInlinedFun (variables.c:4935)
+    n1: 2899 0x4057245: maybe_make_export_env.part.0 (variables.c:5112)
+     n1: 2899 0x40A632A: UnknownInlinedFun (variables.c:5071)
+      n1: 2899 0x40A632A: reset_locale_vars (locale.c:375)
+       n1: 2899 0x40A7AB2: set_locale_var (locale.c:222)
+        n1: 2899 0x40A7DEF: set_default_lang (locale.c:335)
+         n0: 2899 0x401D5BC: main (shell.c:582)
+ n1: 2864 0x4A4356B: _nl_intern_locale_data (loadlocale.c:156)
+  n1: 2864 0x4A432F3: _nl_load_locale_from_archive (loadarchive.c:477)
+   n1: 2864 0x4A42598: _nl_find_locale (findlocale.c:152)
+    n1: 2864 0x4A45542: setlocale (setlocale.c:337)
+     n1: 2864 0x40A725D: set_default_locale (locale.c:88)
+      n0: 2864 0x401CA84: main (shell.c:419)
+ n1: 2200 0x40830A0: UnknownInlinedFun (xmalloc.c:123)
+  n1: 2200 0x40830A0: allocate_buffers (input.c:169)
+   n1: 2200 0x4084EAE: UnknownInlinedFun (input.c:185)
+    n1: 2200 0x4084EAE: fd_to_buffered_stream (input.c:397)
+     n1: 2200 0x4089F25: with_input_from_buffered_stream (input.c:601)
+      n1: 2200 0x401E263: UnknownInlinedFun (shell.c:1743)
+       n0: 2200 0x401E263: main (shell.c:792)
+ n1: 2147 0x404B1A8: UnknownInlinedFun (xmalloc.c:104)
+  n2: 2147 0x404B1A8: make_variable_value (variables.c:2997)
+   n2: 2145 0x404B844: bind_variable_internal.lto_priv.0 (variables.c:3120)
+    n1: 1725 0x404E92C: initialize_shell_variables (variables.c:513)
+     n1: 1725 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 1725 0x401D5B7: main (shell.c:580)
+    n0: 420 in 17 places, all below massif's threshold (1.00%)
+   n0: 2 in 1 place, below massif's threshold (1.00%)
+ n1: 2048 0x4A4A3BA: read_alias_file (localealias.c:329)
+  n1: 2048 0x4A4A637: _nl_expand_alias (localealias.c:194)
+   n1: 2048 0x4A48538: _nl_find_domain (finddomain.c:123)
+    n1: 2048 0x4A47D95: __dcigettext (dcigettext.c:674)
+     n1: 2048 0x40A76A3: UnknownInlinedFun (execute_cmd.c:5762)
+      n1: 2048 0x40A76A3: UnknownInlinedFun (execute_cmd.c:5759)
+       n1: 2048 0x40A76A3: set_default_locale_vars (locale.c:179)
+        n0: 2048 0x401D5C1: main (shell.c:583)
+ n1: 1600 0x4A4A437: extend_alias_table (localealias.c:397)
+  n1: 1600 0x4A4A437: read_alias_file (localealias.c:309)
+   n1: 1600 0x4A4A637: _nl_expand_alias (localealias.c:194)
+    n1: 1600 0x4A48538: _nl_find_domain (finddomain.c:123)
+     n1: 1600 0x4A47D95: __dcigettext (dcigettext.c:674)
+      n1: 1600 0x40A76A3: UnknownInlinedFun (execute_cmd.c:5762)
+       n1: 1600 0x40A76A3: UnknownInlinedFun (execute_cmd.c:5759)
+        n1: 1600 0x40A76A3: set_default_locale_vars (locale.c:179)
+         n0: 1600 0x401D5C1: main (shell.c:583)
+ n1: 1566 0x4045508: UnknownInlinedFun (xmalloc.c:104)
+  n1: 1566 0x4045508: new_shell_variable (variables.c:2771)
+   n2: 1566 0x404A74D: make_new_variable.lto_priv.0 (variables.c:2784)
+    n2: 1460 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+     n1: 1180 0x404E92C: initialize_shell_variables (variables.c:513)
+      n1: 1180 0x4020A5A: shell_initialize (shell.c:1963)
+       n0: 1180 0x401D5B7: main (shell.c:580)
+     n0: 280 in 31 places, all below massif's threshold (1.00%)
+    n0: 106 in 3 places, all below massif's threshold (1.00%)
+ n1: 1566 0x404A770: UnknownInlinedFun (xmalloc.c:104)
+  n2: 1566 0x404A770: make_new_variable.lto_priv.0 (variables.c:2790)
+   n2: 1460 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+    n1: 1180 0x404E92C: initialize_shell_variables (variables.c:513)
+     n1: 1180 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 1180 0x401D5B7: main (shell.c:580)
+    n0: 280 in 31 places, all below massif's threshold (1.00%)
+   n0: 106 in 3 places, all below massif's threshold (1.00%)
+ n1: 1024 0x402D5F7: UnknownInlinedFun (xmalloc.c:104)
+  n1: 1024 0x402D5F7: cmd_init (make_cmd.c:67)
+   n0: 1024 0x401D8D1: main (shell.c:756)
+ n1: 1024 0x402D61C: UnknownInlinedFun (xmalloc.c:104)
+  n1: 1024 0x402D61C: cmd_init (make_cmd.c:68)
+   n0: 1024 0x401D8D1: main (shell.c:756)
+ n1: 1024 0x40853F6: UnknownInlinedFun (xmalloc.c:104)
+  n1: 1024 0x40853F6: uwp_init (unwind_prot.c:99)
+   n0: 1024 0x401D8D6: main (shell.c:757)
+ n1: 968 0x4057308: UnknownInlinedFun (xmalloc.c:123)
+  n1: 968 0x4057308: UnknownInlinedFun (xmalloc.c:144)
+   n1: 968 0x4057308: UnknownInlinedFun (stringvec.c:53)
+    n1: 968 0x4057308: maybe_make_export_env.part.0 (variables.c:5085)
+     n1: 968 0x40A632A: UnknownInlinedFun (variables.c:5071)
+      n1: 968 0x40A632A: reset_locale_vars (locale.c:375)
+       n1: 968 0x40A7AB2: set_locale_var (locale.c:222)
+        n1: 968 0x40A7DEF: set_default_lang (locale.c:335)
+         n0: 968 0x401D5BC: main (shell.c:582)
+#-----------
+snapshot=37
+#-----------
+time=2078897
+mem_heap_B=71477
+mem_heap_extra_B=11467
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=2091090
+mem_heap_B=71713
+mem_heap_extra_B=11535
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=2106494
+mem_heap_B=71974
+mem_heap_extra_B=11650
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=2117881
+mem_heap_B=72024
+mem_heap_extra_B=11704
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=2134028
+mem_heap_B=72159
+mem_heap_extra_B=11761
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=2147421
+mem_heap_B=72449
+mem_heap_extra_B=11879
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=2161954
+mem_heap_B=73212
+mem_heap_extra_B=12148
+mem_stacks_B=0
+heap_tree=detailed
+n17: 73212 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 32768 0x4083976: UnknownInlinedFun (xmalloc.c:104)
+  n5: 32768 0x4083976: hash_create (hashlib.c:72)
+   n1: 8192 0x4047B95: create_variable_tables.lto_priv.0 (variables.c:352)
+    n1: 8192 0x404E0A5: initialize_shell_variables (variables.c:374)
+     n1: 8192 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 8192 0x401D5B7: main (shell.c:580)
+   n1: 8192 0x404ECB1: UnknownInlinedFun (variables.c:2857)
+    n1: 8192 0x404ECB1: UnknownInlinedFun (variables.c:1276)
+     n1: 8192 0x404ECB1: UnknownInlinedFun (variables.c:1269)
+      n1: 8192 0x404ECB1: UnknownInlinedFun (variables.c:1897)
+       n1: 8192 0x404ECB1: initialize_shell_variables (variables.c:709)
+        n1: 8192 0x4020A5A: shell_initialize (shell.c:1963)
+         n0: 8192 0x401D5B7: main (shell.c:580)
+   n1: 8192 0x404ED01: UnknownInlinedFun (variables.c:2857)
+    n1: 8192 0x404ED01: UnknownInlinedFun (variables.c:1276)
+     n1: 8192 0x404ED01: UnknownInlinedFun (variables.c:1269)
+      n1: 8192 0x404ED01: UnknownInlinedFun (variables.c:1895)
+       n1: 8192 0x404ED01: initialize_shell_variables (variables.c:709)
+        n1: 8192 0x4020A5A: shell_initialize (shell.c:1963)
+         n0: 8192 0x401D5B7: main (shell.c:580)
+   n1: 4096 0x4047B39: create_variable_tables.lto_priv.0 (variables.c:360)
+    n1: 4096 0x404E0A5: initialize_shell_variables (variables.c:374)
+     n1: 4096 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 4096 0x401D5B7: main (shell.c:580)
+   n1: 4096 0x4047BB9: create_variable_tables.lto_priv.0 (variables.c:356)
+    n1: 4096 0x404E0A5: initialize_shell_variables (variables.c:374)
+     n1: 4096 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 4096 0x401D5B7: main (shell.c:580)
+ n0: 7015 in 77 places, all below massif's threshold (1.00%)
+ n1: 5760 0x40454EA: UnknownInlinedFun (xmalloc.c:104)
+  n1: 5760 0x40454EA: new_shell_variable (variables.c:2769)
+   n2: 5760 0x404A74D: make_new_variable.lto_priv.0 (variables.c:2784)
+    n2: 5280 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+     n1: 3792 0x404E92C: initialize_shell_variables (variables.c:513)
+      n1: 3792 0x4020A5A: shell_initialize (shell.c:1963)
+       n0: 3792 0x401D5B7: main (shell.c:580)
+     n0: 1488 in 31 places, all below massif's threshold (1.00%)
+    n0: 480 in 3 places, all below massif's threshold (1.00%)
+ n1: 3840 0x4083F3E: UnknownInlinedFun (xmalloc.c:104)
+  n1: 3840 0x4083F3E: hash_insert (hashlib.c:337)
+   n2: 3840 0x404A794: make_new_variable.lto_priv.0 (variables.c:2790)
+    n2: 3520 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+     n1: 2528 0x404E92C: initialize_shell_variables (variables.c:513)
+      n1: 2528 0x4020A5A: shell_initialize (shell.c:1963)
+       n0: 2528 0x401D5B7: main (shell.c:580)
+     n0: 992 in 31 places, all below massif's threshold (1.00%)
+    n0: 320 in 3 places, all below massif's threshold (1.00%)
+ n1: 2899 0x404E96E: UnknownInlinedFun (xmalloc.c:104)
+  n1: 2899 0x404E96E: initialize_shell_variables (variables.c:536)
+   n1: 2899 0x4020A5A: shell_initialize (shell.c:1963)
+    n0: 2899 0x401D5B7: main (shell.c:580)
+ n1: 2899 0x4050245: UnknownInlinedFun (xmalloc.c:104)
+  n1: 2899 0x4050245: make_env_array_from_var_list.lto_priv.0 (variables.c:4897)
+   n1: 2899 0x4057245: UnknownInlinedFun (variables.c:4935)
+    n1: 2899 0x4057245: maybe_make_export_env.part.0 (variables.c:5112)
+     n1: 2899 0x40A632A: UnknownInlinedFun (variables.c:5071)
+      n1: 2899 0x40A632A: reset_locale_vars (locale.c:375)
+       n1: 2899 0x40A7AB2: set_locale_var (locale.c:222)
+        n1: 2899 0x40A7DEF: set_default_lang (locale.c:335)
+         n0: 2899 0x401D5BC: main (shell.c:582)
+ n1: 2864 0x4A4356B: _nl_intern_locale_data (loadlocale.c:156)
+  n1: 2864 0x4A432F3: _nl_load_locale_from_archive (loadarchive.c:477)
+   n1: 2864 0x4A42598: _nl_find_locale (findlocale.c:152)
+    n1: 2864 0x4A45542: setlocale (setlocale.c:337)
+     n1: 2864 0x40A725D: set_default_locale (locale.c:88)
+      n0: 2864 0x401CA84: main (shell.c:419)
+ n1: 2200 0x40830A0: UnknownInlinedFun (xmalloc.c:123)
+  n1: 2200 0x40830A0: allocate_buffers (input.c:169)
+   n1: 2200 0x4084EAE: UnknownInlinedFun (input.c:185)
+    n1: 2200 0x4084EAE: fd_to_buffered_stream (input.c:397)
+     n1: 2200 0x4089F25: with_input_from_buffered_stream (input.c:601)
+      n1: 2200 0x401E263: UnknownInlinedFun (shell.c:1743)
+       n0: 2200 0x401E263: main (shell.c:792)
+ n1: 2147 0x404B1A8: UnknownInlinedFun (xmalloc.c:104)
+  n2: 2147 0x404B1A8: make_variable_value (variables.c:2997)
+   n2: 2145 0x404B844: bind_variable_internal.lto_priv.0 (variables.c:3120)
+    n1: 1725 0x404E92C: initialize_shell_variables (variables.c:513)
+     n1: 1725 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 1725 0x401D5B7: main (shell.c:580)
+    n0: 420 in 17 places, all below massif's threshold (1.00%)
+   n0: 2 in 1 place, below massif's threshold (1.00%)
+ n1: 2048 0x4A4A3BA: read_alias_file (localealias.c:329)
+  n1: 2048 0x4A4A637: _nl_expand_alias (localealias.c:194)
+   n1: 2048 0x4A48538: _nl_find_domain (finddomain.c:123)
+    n1: 2048 0x4A47D95: __dcigettext (dcigettext.c:674)
+     n1: 2048 0x40A76A3: UnknownInlinedFun (execute_cmd.c:5762)
+      n1: 2048 0x40A76A3: UnknownInlinedFun (execute_cmd.c:5759)
+       n1: 2048 0x40A76A3: set_default_locale_vars (locale.c:179)
+        n0: 2048 0x401D5C1: main (shell.c:583)
+ n1: 1600 0x4A4A437: extend_alias_table (localealias.c:397)
+  n1: 1600 0x4A4A437: read_alias_file (localealias.c:309)
+   n1: 1600 0x4A4A637: _nl_expand_alias (localealias.c:194)
+    n1: 1600 0x4A48538: _nl_find_domain (finddomain.c:123)
+     n1: 1600 0x4A47D95: __dcigettext (dcigettext.c:674)
+      n1: 1600 0x40A76A3: UnknownInlinedFun (execute_cmd.c:5762)
+       n1: 1600 0x40A76A3: UnknownInlinedFun (execute_cmd.c:5759)
+        n1: 1600 0x40A76A3: set_default_locale_vars (locale.c:179)
+         n0: 1600 0x401D5C1: main (shell.c:583)
+ n1: 1566 0x4045508: UnknownInlinedFun (xmalloc.c:104)
+  n1: 1566 0x4045508: new_shell_variable (variables.c:2771)
+   n2: 1566 0x404A74D: make_new_variable.lto_priv.0 (variables.c:2784)
+    n2: 1460 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+     n1: 1180 0x404E92C: initialize_shell_variables (variables.c:513)
+      n1: 1180 0x4020A5A: shell_initialize (shell.c:1963)
+       n0: 1180 0x401D5B7: main (shell.c:580)
+     n0: 280 in 31 places, all below massif's threshold (1.00%)
+    n0: 106 in 3 places, all below massif's threshold (1.00%)
+ n1: 1566 0x404A770: UnknownInlinedFun (xmalloc.c:104)
+  n2: 1566 0x404A770: make_new_variable.lto_priv.0 (variables.c:2790)
+   n2: 1460 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+    n1: 1180 0x404E92C: initialize_shell_variables (variables.c:513)
+     n1: 1180 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 1180 0x401D5B7: main (shell.c:580)
+    n0: 280 in 31 places, all below massif's threshold (1.00%)
+   n0: 106 in 3 places, all below massif's threshold (1.00%)
+ n1: 1024 0x402D5F7: UnknownInlinedFun (xmalloc.c:104)
+  n1: 1024 0x402D5F7: cmd_init (make_cmd.c:67)
+   n0: 1024 0x401D8D1: main (shell.c:756)
+ n1: 1024 0x402D61C: UnknownInlinedFun (xmalloc.c:104)
+  n1: 1024 0x402D61C: cmd_init (make_cmd.c:68)
+   n0: 1024 0x401D8D1: main (shell.c:756)
+ n1: 1024 0x40853F6: UnknownInlinedFun (xmalloc.c:104)
+  n1: 1024 0x40853F6: uwp_init (unwind_prot.c:99)
+   n0: 1024 0x401D8D6: main (shell.c:757)
+ n1: 968 0x4057308: UnknownInlinedFun (xmalloc.c:123)
+  n1: 968 0x4057308: UnknownInlinedFun (xmalloc.c:144)
+   n1: 968 0x4057308: UnknownInlinedFun (stringvec.c:53)
+    n1: 968 0x4057308: maybe_make_export_env.part.0 (variables.c:5085)
+     n1: 968 0x40A632A: UnknownInlinedFun (variables.c:5071)
+      n1: 968 0x40A632A: reset_locale_vars (locale.c:375)
+       n1: 968 0x40A7AB2: set_locale_var (locale.c:222)
+        n1: 968 0x40A7DEF: set_default_lang (locale.c:335)
+         n0: 968 0x401D5BC: main (shell.c:582)
+#-----------
+snapshot=44
+#-----------
+time=2172977
+mem_heap_B=73796
+mem_heap_extra_B=12388
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=2180747
+mem_heap_B=74798
+mem_heap_extra_B=12722
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=2191512
+mem_heap_B=75005
+mem_heap_extra_B=12747
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=2205824
+mem_heap_B=75001
+mem_heap_extra_B=12759
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=2212324
+mem_heap_B=75491
+mem_heap_extra_B=12853
+mem_stacks_B=0
+heap_tree=detailed
+n17: 75491 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 32768 0x4083976: UnknownInlinedFun (xmalloc.c:104)
+  n5: 32768 0x4083976: hash_create (hashlib.c:72)
+   n1: 8192 0x4047B95: create_variable_tables.lto_priv.0 (variables.c:352)
+    n1: 8192 0x404E0A5: initialize_shell_variables (variables.c:374)
+     n1: 8192 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 8192 0x401D5B7: main (shell.c:580)
+   n1: 8192 0x404ECB1: UnknownInlinedFun (variables.c:2857)
+    n1: 8192 0x404ECB1: UnknownInlinedFun (variables.c:1276)
+     n1: 8192 0x404ECB1: UnknownInlinedFun (variables.c:1269)
+      n1: 8192 0x404ECB1: UnknownInlinedFun (variables.c:1897)
+       n1: 8192 0x404ECB1: initialize_shell_variables (variables.c:709)
+        n1: 8192 0x4020A5A: shell_initialize (shell.c:1963)
+         n0: 8192 0x401D5B7: main (shell.c:580)
+   n1: 8192 0x404ED01: UnknownInlinedFun (variables.c:2857)
+    n1: 8192 0x404ED01: UnknownInlinedFun (variables.c:1276)
+     n1: 8192 0x404ED01: UnknownInlinedFun (variables.c:1269)
+      n1: 8192 0x404ED01: UnknownInlinedFun (variables.c:1895)
+       n1: 8192 0x404ED01: initialize_shell_variables (variables.c:709)
+        n1: 8192 0x4020A5A: shell_initialize (shell.c:1963)
+         n0: 8192 0x401D5B7: main (shell.c:580)
+   n1: 4096 0x4047B39: create_variable_tables.lto_priv.0 (variables.c:360)
+    n1: 4096 0x404E0A5: initialize_shell_variables (variables.c:374)
+     n1: 4096 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 4096 0x401D5B7: main (shell.c:580)
+   n1: 4096 0x4047BB9: create_variable_tables.lto_priv.0 (variables.c:356)
+    n1: 4096 0x404E0A5: initialize_shell_variables (variables.c:374)
+     n1: 4096 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 4096 0x401D5B7: main (shell.c:580)
+ n0: 8998 in 96 places, all below massif's threshold (1.00%)
+ n1: 5904 0x40454EA: UnknownInlinedFun (xmalloc.c:104)
+  n1: 5904 0x40454EA: new_shell_variable (variables.c:2769)
+   n2: 5904 0x404A74D: make_new_variable.lto_priv.0 (variables.c:2784)
+    n2: 5376 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+     n1: 3792 0x404E92C: initialize_shell_variables (variables.c:513)
+      n1: 3792 0x4020A5A: shell_initialize (shell.c:1963)
+       n0: 3792 0x401D5B7: main (shell.c:580)
+     n0: 1584 in 33 places, all below massif's threshold (1.00%)
+    n0: 528 in 3 places, all below massif's threshold (1.00%)
+ n1: 3936 0x4083F3E: UnknownInlinedFun (xmalloc.c:104)
+  n1: 3936 0x4083F3E: hash_insert (hashlib.c:337)
+   n2: 3936 0x404A794: make_new_variable.lto_priv.0 (variables.c:2790)
+    n2: 3584 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+     n1: 2528 0x404E92C: initialize_shell_variables (variables.c:513)
+      n1: 2528 0x4020A5A: shell_initialize (shell.c:1963)
+       n0: 2528 0x401D5B7: main (shell.c:580)
+     n0: 1056 in 33 places, all below massif's threshold (1.00%)
+    n0: 352 in 3 places, all below massif's threshold (1.00%)
+ n1: 2899 0x404E96E: UnknownInlinedFun (xmalloc.c:104)
+  n1: 2899 0x404E96E: initialize_shell_variables (variables.c:536)
+   n1: 2899 0x4020A5A: shell_initialize (shell.c:1963)
+    n0: 2899 0x401D5B7: main (shell.c:580)
+ n1: 2899 0x4050245: UnknownInlinedFun (xmalloc.c:104)
+  n1: 2899 0x4050245: make_env_array_from_var_list.lto_priv.0 (variables.c:4897)
+   n1: 2899 0x4057245: UnknownInlinedFun (variables.c:4935)
+    n1: 2899 0x4057245: maybe_make_export_env.part.0 (variables.c:5112)
+     n1: 2899 0x40A632A: UnknownInlinedFun (variables.c:5071)
+      n1: 2899 0x40A632A: reset_locale_vars (locale.c:375)
+       n1: 2899 0x40A7AB2: set_locale_var (locale.c:222)
+        n1: 2899 0x40A7DEF: set_default_lang (locale.c:335)
+         n0: 2899 0x401D5BC: main (shell.c:582)
+ n1: 2864 0x4A4356B: _nl_intern_locale_data (loadlocale.c:156)
+  n1: 2864 0x4A432F3: _nl_load_locale_from_archive (loadarchive.c:477)
+   n1: 2864 0x4A42598: _nl_find_locale (findlocale.c:152)
+    n1: 2864 0x4A45542: setlocale (setlocale.c:337)
+     n1: 2864 0x40A725D: set_default_locale (locale.c:88)
+      n0: 2864 0x401CA84: main (shell.c:419)
+ n1: 2200 0x40830A0: UnknownInlinedFun (xmalloc.c:123)
+  n1: 2200 0x40830A0: allocate_buffers (input.c:169)
+   n1: 2200 0x4084EAE: UnknownInlinedFun (input.c:185)
+    n1: 2200 0x4084EAE: fd_to_buffered_stream (input.c:397)
+     n1: 2200 0x4089F25: with_input_from_buffered_stream (input.c:601)
+      n1: 2200 0x401E263: UnknownInlinedFun (shell.c:1743)
+       n0: 2200 0x401E263: main (shell.c:792)
+ n1: 2153 0x404B1A8: UnknownInlinedFun (xmalloc.c:104)
+  n2: 2153 0x404B1A8: make_variable_value (variables.c:2997)
+   n2: 2151 0x404B844: bind_variable_internal.lto_priv.0 (variables.c:3120)
+    n1: 1725 0x404E92C: initialize_shell_variables (variables.c:513)
+     n1: 1725 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 1725 0x401D5B7: main (shell.c:580)
+    n0: 426 in 19 places, all below massif's threshold (1.00%)
+   n0: 2 in 1 place, below massif's threshold (1.00%)
+ n1: 2048 0x4A4A3BA: read_alias_file (localealias.c:329)
+  n1: 2048 0x4A4A637: _nl_expand_alias (localealias.c:194)
+   n1: 2048 0x4A48538: _nl_find_domain (finddomain.c:123)
+    n1: 2048 0x4A47D95: __dcigettext (dcigettext.c:674)
+     n1: 2048 0x40A76A3: UnknownInlinedFun (execute_cmd.c:5762)
+      n1: 2048 0x40A76A3: UnknownInlinedFun (execute_cmd.c:5759)
+       n1: 2048 0x40A76A3: set_default_locale_vars (locale.c:179)
+        n0: 2048 0x401D5C1: main (shell.c:583)
+ n1: 1600 0x4A4A437: extend_alias_table (localealias.c:397)
+  n1: 1600 0x4A4A437: read_alias_file (localealias.c:309)
+   n1: 1600 0x4A4A637: _nl_expand_alias (localealias.c:194)
+    n1: 1600 0x4A48538: _nl_find_domain (finddomain.c:123)
+     n1: 1600 0x4A47D95: __dcigettext (dcigettext.c:674)
+      n1: 1600 0x40A76A3: UnknownInlinedFun (execute_cmd.c:5762)
+       n1: 1600 0x40A76A3: UnknownInlinedFun (execute_cmd.c:5759)
+        n1: 1600 0x40A76A3: set_default_locale_vars (locale.c:179)
+         n0: 1600 0x401D5C1: main (shell.c:583)
+ n1: 1591 0x4045508: UnknownInlinedFun (xmalloc.c:104)
+  n1: 1591 0x4045508: new_shell_variable (variables.c:2771)
+   n2: 1591 0x404A74D: make_new_variable.lto_priv.0 (variables.c:2784)
+    n2: 1474 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+     n1: 1180 0x404E92C: initialize_shell_variables (variables.c:513)
+      n1: 1180 0x4020A5A: shell_initialize (shell.c:1963)
+       n0: 1180 0x401D5B7: main (shell.c:580)
+     n0: 294 in 33 places, all below massif's threshold (1.00%)
+    n0: 117 in 3 places, all below massif's threshold (1.00%)
+ n1: 1591 0x404A770: UnknownInlinedFun (xmalloc.c:104)
+  n2: 1591 0x404A770: make_new_variable.lto_priv.0 (variables.c:2790)
+   n2: 1474 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+    n1: 1180 0x404E92C: initialize_shell_variables (variables.c:513)
+     n1: 1180 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 1180 0x401D5B7: main (shell.c:580)
+    n0: 294 in 33 places, all below massif's threshold (1.00%)
+   n0: 117 in 3 places, all below massif's threshold (1.00%)
+ n1: 1024 0x402D5F7: UnknownInlinedFun (xmalloc.c:104)
+  n1: 1024 0x402D5F7: cmd_init (make_cmd.c:67)
+   n0: 1024 0x401D8D1: main (shell.c:756)
+ n1: 1024 0x402D61C: UnknownInlinedFun (xmalloc.c:104)
+  n1: 1024 0x402D61C: cmd_init (make_cmd.c:68)
+   n0: 1024 0x401D8D1: main (shell.c:756)
+ n1: 1024 0x40853F6: UnknownInlinedFun (xmalloc.c:104)
+  n1: 1024 0x40853F6: uwp_init (unwind_prot.c:99)
+   n0: 1024 0x401D8D6: main (shell.c:757)
+ n1: 968 0x4057308: UnknownInlinedFun (xmalloc.c:123)
+  n1: 968 0x4057308: UnknownInlinedFun (xmalloc.c:144)
+   n1: 968 0x4057308: UnknownInlinedFun (stringvec.c:53)
+    n1: 968 0x4057308: maybe_make_export_env.part.0 (variables.c:5085)
+     n1: 968 0x40A632A: UnknownInlinedFun (variables.c:5071)
+      n1: 968 0x40A632A: reset_locale_vars (locale.c:375)
+       n1: 968 0x40A7AB2: set_locale_var (locale.c:222)
+        n1: 968 0x40A7DEF: set_default_lang (locale.c:335)
+         n0: 968 0x401D5BC: main (shell.c:582)
+#-----------
+snapshot=49
+#-----------
+time=2216800
+mem_heap_B=75369
+mem_heap_extra_B=12823
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=2224410
+mem_heap_B=74734
+mem_heap_extra_B=12746
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=2231156
+mem_heap_B=74816
+mem_heap_extra_B=12848
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=2237734
+mem_heap_B=77115
+mem_heap_extra_B=12989
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=2237924
+mem_heap_B=77115
+mem_heap_extra_B=12989
+mem_stacks_B=0
+heap_tree=peak
+n17: 77115 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 34816 0x4083976: UnknownInlinedFun (xmalloc.c:104)
+  n6: 34816 0x4083976: hash_create (hashlib.c:72)
+   n1: 8192 0x4047B95: create_variable_tables.lto_priv.0 (variables.c:352)
+    n1: 8192 0x404E0A5: initialize_shell_variables (variables.c:374)
+     n1: 8192 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 8192 0x401D5B7: main (shell.c:580)
+   n1: 8192 0x404ECB1: UnknownInlinedFun (variables.c:2857)
+    n1: 8192 0x404ECB1: UnknownInlinedFun (variables.c:1276)
+     n1: 8192 0x404ECB1: UnknownInlinedFun (variables.c:1269)
+      n1: 8192 0x404ECB1: UnknownInlinedFun (variables.c:1897)
+       n1: 8192 0x404ECB1: initialize_shell_variables (variables.c:709)
+        n1: 8192 0x4020A5A: shell_initialize (shell.c:1963)
+         n0: 8192 0x401D5B7: main (shell.c:580)
+   n1: 8192 0x404ED01: UnknownInlinedFun (variables.c:2857)
+    n1: 8192 0x404ED01: UnknownInlinedFun (variables.c:1276)
+     n1: 8192 0x404ED01: UnknownInlinedFun (variables.c:1269)
+      n1: 8192 0x404ED01: UnknownInlinedFun (variables.c:1895)
+       n1: 8192 0x404ED01: initialize_shell_variables (variables.c:709)
+        n1: 8192 0x4020A5A: shell_initialize (shell.c:1963)
+         n0: 8192 0x401D5B7: main (shell.c:580)
+   n1: 4096 0x4047B39: create_variable_tables.lto_priv.0 (variables.c:360)
+    n1: 4096 0x404E0A5: initialize_shell_variables (variables.c:374)
+     n1: 4096 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 4096 0x401D5B7: main (shell.c:580)
+   n1: 4096 0x4047BB9: create_variable_tables.lto_priv.0 (variables.c:356)
+    n1: 4096 0x404E0A5: initialize_shell_variables (variables.c:374)
+     n1: 4096 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 4096 0x401D5B7: main (shell.c:580)
+   n1: 2048 0x4084139: UnknownInlinedFun (hashcmd.c:46)
+    n1: 2048 0x4084139: UnknownInlinedFun (hashcmd.c:43)
+     n1: 2048 0x4084139: phash_insert.part.0 (hashcmd.c:101)
+      n1: 2048 0x40AA395: UnknownInlinedFun (hashcmd.c:97)
+       n1: 2048 0x40AA395: search_for_command (findcmd.c:426)
+        n1: 2048 0x405240B: execute_disk_command.lto_priv.0 (execute_cmd.c:5808)
+         n1: 2048 0x403E2F8: execute_simple_command (execute_cmd.c:4938)
+          n1: 2048 0x4040552: execute_command_internal (execute_cmd.c:938)
+           n1: 2048 0x4042A53: execute_command (execute_cmd.c:456)
+            n1: 2048 0x4040726: UnknownInlinedFun (execute_cmd.c:3887)
+             n1: 2048 0x4040726: execute_command_internal (execute_cmd.c:1065)
+              n1: 2048 0x4042A53: execute_command (execute_cmd.c:456)
+               n1: 2048 0x402B1F1: reader_loop (eval.c:183)
+                n0: 2048 0x401D99F: main (shell.c:834)
+ n0: 8542 in 104 places, all below massif's threshold (1.00%)
+ n1: 5904 0x40454EA: UnknownInlinedFun (xmalloc.c:104)
+  n1: 5904 0x40454EA: new_shell_variable (variables.c:2769)
+   n2: 5904 0x404A74D: make_new_variable.lto_priv.0 (variables.c:2784)
+    n2: 5376 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+     n1: 3792 0x404E92C: initialize_shell_variables (variables.c:513)
+      n1: 3792 0x4020A5A: shell_initialize (shell.c:1963)
+       n0: 3792 0x401D5B7: main (shell.c:580)
+     n0: 1584 in 33 places, all below massif's threshold (1.00%)
+    n0: 528 in 3 places, all below massif's threshold (1.00%)
+ n1: 3968 0x4083F3E: UnknownInlinedFun (xmalloc.c:104)
+  n2: 3968 0x4083F3E: hash_insert (hashlib.c:337)
+   n2: 3936 0x404A794: make_new_variable.lto_priv.0 (variables.c:2790)
+    n2: 3584 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+     n1: 2528 0x404E92C: initialize_shell_variables (variables.c:513)
+      n1: 2528 0x4020A5A: shell_initialize (shell.c:1963)
+       n0: 2528 0x401D5B7: main (shell.c:580)
+     n0: 1056 in 33 places, all below massif's threshold (1.00%)
+    n0: 352 in 3 places, all below massif's threshold (1.00%)
+   n0: 32 in 1 place, below massif's threshold (1.00%)
+ n1: 2899 0x404E96E: UnknownInlinedFun (xmalloc.c:104)
+  n1: 2899 0x404E96E: initialize_shell_variables (variables.c:536)
+   n1: 2899 0x4020A5A: shell_initialize (shell.c:1963)
+    n0: 2899 0x401D5B7: main (shell.c:580)
+ n1: 2899 0x4050245: UnknownInlinedFun (xmalloc.c:104)
+  n1: 2899 0x4050245: make_env_array_from_var_list.lto_priv.0 (variables.c:4897)
+   n1: 2899 0x4057245: UnknownInlinedFun (variables.c:4935)
+    n1: 2899 0x4057245: maybe_make_export_env.part.0 (variables.c:5112)
+     n1: 2899 0x40A632A: UnknownInlinedFun (variables.c:5071)
+      n1: 2899 0x40A632A: reset_locale_vars (locale.c:375)
+       n1: 2899 0x40A7AB2: set_locale_var (locale.c:222)
+        n1: 2899 0x40A7DEF: set_default_lang (locale.c:335)
+         n0: 2899 0x401D5BC: main (shell.c:582)
+ n1: 2864 0x4A4356B: _nl_intern_locale_data (loadlocale.c:156)
+  n1: 2864 0x4A432F3: _nl_load_locale_from_archive (loadarchive.c:477)
+   n1: 2864 0x4A42598: _nl_find_locale (findlocale.c:152)
+    n1: 2864 0x4A45542: setlocale (setlocale.c:337)
+     n1: 2864 0x40A725D: set_default_locale (locale.c:88)
+      n0: 2864 0x401CA84: main (shell.c:419)
+ n1: 2200 0x40830A0: UnknownInlinedFun (xmalloc.c:123)
+  n1: 2200 0x40830A0: allocate_buffers (input.c:169)
+   n1: 2200 0x4084EAE: UnknownInlinedFun (input.c:185)
+    n1: 2200 0x4084EAE: fd_to_buffered_stream (input.c:397)
+     n1: 2200 0x4089F25: with_input_from_buffered_stream (input.c:601)
+      n1: 2200 0x401E263: UnknownInlinedFun (shell.c:1743)
+       n0: 2200 0x401E263: main (shell.c:792)
+ n1: 2153 0x404B1A8: UnknownInlinedFun (xmalloc.c:104)
+  n2: 2153 0x404B1A8: make_variable_value (variables.c:2997)
+   n2: 2151 0x404B844: bind_variable_internal.lto_priv.0 (variables.c:3120)
+    n1: 1725 0x404E92C: initialize_shell_variables (variables.c:513)
+     n1: 1725 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 1725 0x401D5B7: main (shell.c:580)
+    n0: 426 in 19 places, all below massif's threshold (1.00%)
+   n0: 2 in 1 place, below massif's threshold (1.00%)
+ n1: 2048 0x4A4A3BA: read_alias_file (localealias.c:329)
+  n1: 2048 0x4A4A637: _nl_expand_alias (localealias.c:194)
+   n1: 2048 0x4A48538: _nl_find_domain (finddomain.c:123)
+    n1: 2048 0x4A47D95: __dcigettext (dcigettext.c:674)
+     n1: 2048 0x40A76A3: UnknownInlinedFun (execute_cmd.c:5762)
+      n1: 2048 0x40A76A3: UnknownInlinedFun (execute_cmd.c:5759)
+       n1: 2048 0x40A76A3: set_default_locale_vars (locale.c:179)
+        n0: 2048 0x401D5C1: main (shell.c:583)
+ n1: 1600 0x4A4A437: extend_alias_table (localealias.c:397)
+  n1: 1600 0x4A4A437: read_alias_file (localealias.c:309)
+   n1: 1600 0x4A4A637: _nl_expand_alias (localealias.c:194)
+    n1: 1600 0x4A48538: _nl_find_domain (finddomain.c:123)
+     n1: 1600 0x4A47D95: __dcigettext (dcigettext.c:674)
+      n1: 1600 0x40A76A3: UnknownInlinedFun (execute_cmd.c:5762)
+       n1: 1600 0x40A76A3: UnknownInlinedFun (execute_cmd.c:5759)
+        n1: 1600 0x40A76A3: set_default_locale_vars (locale.c:179)
+         n0: 1600 0x401D5C1: main (shell.c:583)
+ n1: 1591 0x4045508: UnknownInlinedFun (xmalloc.c:104)
+  n1: 1591 0x4045508: new_shell_variable (variables.c:2771)
+   n2: 1591 0x404A74D: make_new_variable.lto_priv.0 (variables.c:2784)
+    n2: 1474 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+     n1: 1180 0x404E92C: initialize_shell_variables (variables.c:513)
+      n1: 1180 0x4020A5A: shell_initialize (shell.c:1963)
+       n0: 1180 0x401D5B7: main (shell.c:580)
+     n0: 294 in 33 places, all below massif's threshold (1.00%)
+    n0: 117 in 3 places, all below massif's threshold (1.00%)
+ n1: 1591 0x404A770: UnknownInlinedFun (xmalloc.c:104)
+  n2: 1591 0x404A770: make_new_variable.lto_priv.0 (variables.c:2790)
+   n2: 1474 0x404B833: bind_variable_internal.lto_priv.0 (variables.c:3119)
+    n1: 1180 0x404E92C: initialize_shell_variables (variables.c:513)
+     n1: 1180 0x4020A5A: shell_initialize (shell.c:1963)
+      n0: 1180 0x401D5B7: main (shell.c:580)
+    n0: 294 in 33 places, all below massif's threshold (1.00%)
+   n0: 117 in 3 places, all below massif's threshold (1.00%)
+ n1: 1024 0x402D5F7: UnknownInlinedFun (xmalloc.c:104)
+  n1: 1024 0x402D5F7: cmd_init (make_cmd.c:67)
+   n0: 1024 0x401D8D1: main (shell.c:756)
+ n1: 1024 0x402D61C: UnknownInlinedFun (xmalloc.c:104)
+  n1: 1024 0x402D61C: cmd_init (make_cmd.c:68)
+   n0: 1024 0x401D8D1: main (shell.c:756)
+ n1: 1024 0x40853F6: UnknownInlinedFun (xmalloc.c:104)
+  n1: 1024 0x40853F6: uwp_init (unwind_prot.c:99)
+   n0: 1024 0x401D8D6: main (shell.c:757)
+ n1: 968 0x4057308: UnknownInlinedFun (xmalloc.c:123)
+  n1: 968 0x4057308: UnknownInlinedFun (xmalloc.c:144)
+   n1: 968 0x4057308: UnknownInlinedFun (stringvec.c:53)
+    n1: 968 0x4057308: maybe_make_export_env.part.0 (variables.c:5085)
+     n1: 968 0x40A632A: UnknownInlinedFun (variables.c:5071)
+      n1: 968 0x40A632A: reset_locale_vars (locale.c:375)
+       n1: 968 0x40A7AB2: set_locale_var (locale.c:222)
+        n1: 968 0x40A7DEF: set_default_lang (locale.c:335)
+         n0: 968 0x401D5BC: main (shell.c:582)
+#-----------
+snapshot=54
+#-----------
+time=2244490
+mem_heap_B=76390
+mem_heap_extra_B=12642
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=2251014
+mem_heap_B=75474
+mem_heap_extra_B=12086
+mem_stacks_B=0
+heap_tree=empty

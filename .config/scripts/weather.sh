@@ -1,41 +1,20 @@
 #!/bin/bash
+str=$(curl -s 'wttr.in/Moscow?format=%C+%t' || echo "Unknown +0°C")
 
-str=$(curl -s wttr.in/Moscow?format="%C+%t")
 temp=$(echo "$str" | awk '{print $NF}')
-condition=$(echo "$str" | awk '{$NF=""; print $0}' | sed 's/[[:space:]]*$//')
+condition=$(echo "$str" | awk '{$NF=""; print $0}' | sed 's/[[:space:]]*$//' | tr '[:upper:]' '[:lower:]')
 
+# Map condition to icon
 case "$condition" in
-*Sunny* | *Clear*)
-  ICON=" " # Sunny or Clear
-  ;;
-*Partly* | *Partly*Sunny* | *Partly*cloudy*)
-  ICON=" " # Partly Sunny or Cloudy
-  ;;
-*Cloudy* | *Overcast*)
-  ICON=" " # Cloudy or Overcast
-  ;;
-*Rain* | *rain* | *Light* | *Showers*)
-  ICON=" " # Rain or Showers
-  ;;
-*Thunder* | *Storm*)
-  ICON=" " # Thunderstorm or Storm
-  ;;
-*Snow* | *snow* | *Freezing* | *Light*Snow*)
-  ICON=" " # Snow or Freezing drizzle
-  ;;
-*Fog* | *Mist* | *Haze* | *Light*rain*shower* | *mist*)
-  ICON="󰖑 " # Fog, Mist, or Haze
-  ;;
-*Windy* | *Breezy*)
-  ICON="󰖝 " # Windy or Breezy
-  ;;
-*)
-  ICON="" # Unknown
-  ;;
+"* sunny*" | *clear*) ICON=" " ;;             # Sunny / Clear
+*partly*cloudy* | *partly*sunny*) ICON=" " ;; # Partly Cloudy
+*cloudy* | *overcast*) ICON=" " ;;            # Cloudy
+*rain* | *shower* | *drizzle*) ICON=" " ;;    # Rain / Showers
+*thunder* | *storm*) ICON=" " ;;              # Thunderstorm
+*snow* | *sleet* | *flurr*) ICON=" " ;;       # Snow
+*fog* | *mist* | *haze*) ICON="󰖑 " ;;          # Fog / Mist
+*wind* | *breez*) ICON="󰖝 " ;;                 # Windy
+*) ICON=" " ;;                                # Unknown
 esac
 
-if [ "$temp" == "processed" ]; then
-  exit 1
-fi
-
-echo "{\"alt\": \"""$ICON""\",\"text\": \"""$temp""\",}"
+printf '{"alt":"%s","text":"%s"}\n' "$ICON" "$temp"

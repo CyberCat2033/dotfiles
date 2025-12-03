@@ -35,7 +35,7 @@ fi
 
 # 🔥2: КЭШ { } (3мс)
 last_metadata=$(cat "$cache_metadata" 2>/dev/null)
-[ "$current_metadata" = "$last_metadata" ] && {
+[ "$current_metadata" = "$last_metadata" ] && [ "$current_metadata" != "" ] && {
   notify-send --hint=int:transient:1 --hint=string:x-canonical-private-synchronous:8888 -i "$rounded_cover" -u critical -t 1488 "$status" "$artist"$'\n'"$title"
   exit 0
 }
