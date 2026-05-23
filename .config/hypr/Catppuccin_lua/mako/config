@@ -1,0 +1,55 @@
+# GLOBAL
+#sort=+time
+layer=overlay
+
+# STYLE
+font=JetBrains Mono 12
+width=280
+margin=10
+border-size=2
+padding=8, 8,  0,  0
+border-size=1
+icons=1
+markup=1
+border-radius=10
+default-timeout=1488
+progress-color=#1e1e2e
+max-icon-size=70
+icon-path= /usr/share/icons/Tela-circle-black/scalable/apps/:/usr/share/icons/Tela-circle-black/scalable/devices/:/usr/share/icons/Tela-circle-black/scalable/mimetypes/:/usr/share/icons/Tela-circle-black/scalable/places/
+icon-location=left
+format=<b>%s</b>\n%b
+text-alignment=center
+#anchor=top-center
+# CRITERA
+## urgency
+[urgency=low]
+default-timeout=2000
+background-color=#1e1e2e
+border-color=#cdd6f4
+background-color=#1e1e2e
+text-color=#cdd6f4
+
+[urgency=normal]
+icons=1
+default-timeout=3000
+background-color=#1e1e2e
+border-color=#1E1E2E
+text-color=#CDD6F4
+
+[urgency=critical]
+default-timeout=2000
+background-color=#1E1E2E
+border-color=#FAB387
+text-color=#CDD6F4
+
+## app-name
+[app-name=grim]
+anchor=top-center
+format=%s\n%b
+group-by=app-name
+default-timeout=3000
+on-notify=exec "Cкриншот сохранен:"
+
+## body
+# [body=""]
+# format=%s\n%b

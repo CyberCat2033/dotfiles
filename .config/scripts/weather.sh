@@ -1,6 +1,5 @@
 #!/bin/bash
 str=$(curl -s 'wttr.in/Moscow?format=%C+%t' || echo "Unknown +0°C")
-
 temp=$(echo "$str" | awk '{print $NF}')
 condition=$(echo "$str" | awk '{$NF=""; print $0}' | sed 's/[[:space:]]*$//' | tr '[:upper:]' '[:lower:]')
 

@@ -1,0 +1,6 @@
+source = /home/cybercat/.config/hypr/Catppuccin/base.conf
+source = /home/cybercat/.config/hypr/Catppuccin/binds.conf
+source = /home/cybercat/.config/hypr/windowrules.conf
+source = /home/cybercat/.config/hypr/Catppuccin/env.conf
+source = /home/cybercat/.config/hypr/Catppuccin/autostart.conf
+# source = /home/cybercat/.config/hypr/Catppuccin/nvidia.conf

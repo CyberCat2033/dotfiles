@@ -1,4 +1,4 @@
-"$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
+# "$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
 
 [mgr]
 ratio = [1, 4, 3]
@@ -10,7 +10,7 @@ title_format = "{cwd}"
 
 
 [preview]
-warp = "yes"
+wrap = "yes"
 
 
 [opener]
@@ -62,7 +62,7 @@ fallback = [
 
 [open]
 rules = [
-  { name = "*/", use = "folder" },
+  { url = "*/", use = "folder" },
   { mime = "text/*", use = "text" },
   { mime = "image/*", use = "image" },
   { mime = "video/*", use = "video" },
@@ -85,23 +85,25 @@ rules = [
   { mime = "*", use = "fallback" },
 ]
 
-[[plugin.prepend_fetchers]]
-id = "git"
-name = "*"
-run = "git"
-
-[[plugin.prepend_fetchers]]
-id = "git"
-name = "*/"
-run = "git"
+# Disabled because these background git fetchers keep quit blocked with
+# "There are unfinished tasks" prompts.
+# [[plugin.prepend_fetchers]]
+# group = "hover"
+# url = "*"
+# run = "git"
+#
+# [[plugin.prepend_fetchers]]
+# group = "hover"
+# url = "*/"
+# run = "git"
 
 [plugin]
 
 prepend_previewers = [
-    { name = "*.csv", run = "rich-preview"}, # for csv files
-    { name = "*.md", run = "rich-preview" }, # for markdown (.md) files
-    { name = "*.rst", run = "rich-preview"}, # for restructured text (.rst) files
-    { name = "*.ipynb", run = "rich-preview"}, # for jupyter notebooks (.ipynb)
-    { name = "*.json", run = "rich-preview"}, # for json (.json) files
-    # { name = "*.", run = "rich-preview"} # for particular language files eg. .py, .go., .lua, etc.
+    { url = "*.csv", run = "rich-preview"}, # for csv files
+    { url = "*.md", run = "rich-preview" }, # for markdown (.md) files
+    { url = "*.rst", run = "rich-preview"}, # for restructured text (.rst) files
+    { url = "*.ipynb", run = "rich-preview"}, # for jupyter notebooks (.ipynb)
+    { url = "*.json", run = "rich-preview"}, # for json (.json) files
+    # { url = "*.", run = "rich-preview"} # for particular language files eg. .py, .go., .lua, etc.
 ]
